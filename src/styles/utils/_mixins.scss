@@ -1,0 +1,13 @@
+@mixin flex($jc, $at, $direction:row,$gap:0px){
+    display: flex;
+    justify-content: $jc;
+    flex-direction: $direction;
+    align-items: $at;
+    gap: $gap;
+}
+
+@mixin p($position, $l, $r){
+    position: $position;
+    left: $l;
+    right: $r;
+}

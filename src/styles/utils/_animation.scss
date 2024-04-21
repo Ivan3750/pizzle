@@ -1,0 +1,36 @@
+@keyframes garlicAnimation {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+
+}
+@keyframes tomatoAnimation {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+
+}
+@keyframes leaf {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+
+}
+@keyframes leafAnimation {
+    0%{
+        transform: translateX(-150px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+
+}

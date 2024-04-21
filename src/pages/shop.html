@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../styles/shop.css">
+    <link rel="stylesheet" href="../styles/standart.css">
+
+</head>
+<body>
+    <header id="headerB" class="header">
+        <a href="../pages/index.html">
+            <img src="../assets/images/home/footer_logo.png" alt="" class="header__logo">
+        </a>
+        <nav class="header__nav">
+            <a href="../pages/index.html" class="header__nav-element" style="color: black;">Home</a>
+            <a href="../pages/shop.html" class="header__nav-element" style="color: black;">Shop</a>
+            <a href="../pages/news.html" class="header__nav-element" style="color: black;">News</a>
+        </nav>
+        <img src="../assets/images/home/shopping-bag-black.svg" alt="" class="header__cart">
+    
+    
+    </header>
+    <main>
+        <section class="title__section">
+            <h3 class="title">Product</h3>
+        </section>
+        <section class="shop">
+            <div class="shop__sidebar">
+                <div class="shop__sidebar__searchbar">
+                    <input type="text" class="shop__sidebar__searchbar-input" placeholder="Search...">
+                    <button class="shop__sidebar__searchbar-btn">
+                        <span class="material-symbols-outlined" style="color: rgb(255, 255, 255);">
+                            search
+                        </span>
+                    </button>
+                </div>
+                <div class="shop__sidebar__category">
+                    <h3 class="shop__sidebar__category-title">Categories
+                    </h3>
+                    <ul class="shop__sidebar__category__list">
+                        <li class="shop__sidebar__category__list-element">Chicken</li> 
+                        <li class="shop__sidebar__category__list-element">Donuts</li> 
+                        <li class="shop__sidebar__category__list-element">Drinks</li> 
+                        <li class="shop__sidebar__category__list-element">Fries</li> 
+                        <li class="shop__sidebar__category__list-element">Pizza</li> 
+                        <li class="shop__sidebar__category__list-element">Sandwich</li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="shop__products">
+                <div class="shop__products__list-result">
+                    <p class="shop__products__list-result-text">Showing 1–9 of 22 results
+                    </p>
+                    <select name="orderby" class="orderby" aria-label="Shop order">
+                        <option value="popularity">Sort by popularity</option>
+                        <option value="rating">Sort by average rating</option>
+                        <option value="date" selected="selected">Sort by latest</option>
+                        <option value="price">Sort by price: low to high</option>
+                        <option value="price-desc">Sort by price: high to low</option>
+                     </select>
+                </div>
+                <div class="shop__products__main">
+                    
+                </div>
+            </div>
+        </section>
+        <section id="subscribe" class="subscribe"></section>
+    </main>
+    <script type="module" src="../script/cart.js"></script>
+    <footer id="footer" class="footer"></footer>
+    <script src="../script/onload.js"></script>
+    <script src="../script/shop.js"></script>
+    <script type="module" src="../script/Products.js"></script>
+</body>
+</html>

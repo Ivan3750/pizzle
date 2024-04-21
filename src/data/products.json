@@ -1,0 +1,86 @@
+[
+    {
+        "name": "BBQ Pizza TinTin",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "10.99",
+        "img": "../assets/images/products/pizza_slide_4.png"
+        
+    },
+    {
+        "name": "Chocolate Donuts",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "22.70",
+        "img": "../assets/images/products/pizza_slide_2.png"
+        
+    },
+    {
+        "name": "Lemon Juice",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "12.30",
+        "img": "../assets/images/products/juice_1.png"
+        
+    },
+    {
+        "name": "Coke Soft Drinks",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "13.60",
+        "img": "../assets/images/products/juice_3.png"
+        
+    },
+    {
+        "name": "Orange Juice",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "10.20",
+        "img": "../assets/images/products/juice_2.png"
+        
+    },
+    {
+        "name": "Chicken Hamburger",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "40.30",
+        "img": "../assets/images/products/bugar_2.png"
+        
+    },
+    {
+        "name": "Bolognese Pasta",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "15.30",
+        "img": "../assets/images/products/pasta.png"
+        
+    },
+    {
+        "name": "Greek Salad",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "07.40",
+        "img": "../assets/images/products/salad_1.png"
+        
+    },
+    {
+        "name": "Flavour Cream Ice",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "14.20",
+        "img": "../assets/images/products/ice-cream-2.png"
+        
+    },
+    {
+        "name": "Vanilla Ice Cream",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "13.30",
+        "img": "../assets/images/products/ice-cream-1.png"
+        
+    },
+    {
+        "name": "Black Hamburger",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "42.10",
+        "img": "../assets/images/products/burgur-1.png"
+        
+    },
+    {
+        "name": "BBQ Pizza TinTin",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "24.00",
+        "img": "../assets/images/products/pizza_slide_4 (1).png"
+        
+    }
+]
