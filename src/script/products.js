@@ -8,8 +8,6 @@ fetch('../data/products.json')
     return response.json();
   })
   .then(data => {
-    console.log(data);
-    
     for(let element of data){
       let product = new Product(element.name, element.info, element.price, element.img);
     }

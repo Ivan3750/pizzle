@@ -38,6 +38,8 @@ export class Product{
         productBtn.addEventListener("click", () => {
             NewCart.addProduct(this)
             console.log(NewCart.getCartItems())
+            const cartItems = NewCart.getCartItems()
+            localStorage.setItem("cart", JSON.stringify(cartItems))
 
         })
         productsBlock.append(productCard)

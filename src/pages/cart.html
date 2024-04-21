@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../styles/standart.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+</head>
+<body>
+    <header id="headerB" class="header">
+        <a href="../pages/index.html">
+            <img src="../assets/images/home/footer_logo.png" alt="" class="header__logo">
+        </a>
+        <nav class="header__nav">
+            <a href="../pages/index.html" class="header__nav-element" style="color: black;">Home</a>
+            <a href="../pages/shop.html" class="header__nav-element" style="color: black;">Shop</a>
+            <a href="../pages/news.html" class="header__nav-element" style="color: black;">News</a>
+        </nav>
+        <a href="../pages/cart.html">
+            <img src="../assets/images/home/shopping-bag-black.svg" alt="" class="header__cart">
+        </a>
+    
+    
+    </header>
+    
+    <main>
+        <section class="title__section">
+            <h3 class="title">Cart</h3>
+        </section>
+        <section class="cart">
+            <div class="cart-table">
+                <div class="cart-table__box">
+                    <div class="cart-table__head">
+                        <p class="cart-table__head-item">Preview</p>
+                        <p class="cart-table__head-item">Product</p>
+                        <p class="cart-table__head-item">Price</p>
+                        <p class="cart-table__head-item">Quantity</p>
+                        <p class="cart-table__head-item">Total</p>
+                        <p class="cart-table__head-item">Action</p>
+                    </div>
+                    <div class="cart-table__body">
+                        <div class="cart-table__body-product">
+                            <img src="" alt="" class="cart-table__body-product-img">
+                            <p class="cart-table__body-product-name">Paneer Makhani Pizza</p>
+                            <p class="cart-table__body-product-price">£18.00
+                            </p>
+                            <input type="number" class="cart-table__body-product-amount" min="1" max="10"></input>
+                            <p class="cart-table__body-product-total">£18.00
+                            </p>
+                            <button class="cart-table__body-product-remove">x</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-summury">
+                <div class="subtotal__box">
+                    <p class="subtotal__box-name">
+                        Cart Subtotal</p>
+                    <p class="subtotal__box-price">24</p>
+                </div>
+                <div class="shipping__box">
+                    <p class="shipping__box-name">
+                        Shipping and Handling</p>
+                    <p class="shipping__box-price">00</p>
+                </div>
+                <div class="total__box">
+                    <p class="total__box-name">
+                        Order Total</p>
+                    <p class="total__box-price">24</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="subscribe" class="subscribe"></section>
+    <footer id="footer" class="footer"></footer>
+    <script src="../script/onload.js"></script>
+    <script src="../script/cartPage.js"></script>
+
+</body>
+</html>
