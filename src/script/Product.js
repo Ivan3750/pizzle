@@ -3,7 +3,8 @@ const NewCart = new Cart
 
 const productsBlock = document.querySelector('.shop__products__main');
 export class Product{
-    constructor(name, info, price, img){
+    constructor(id,name, info, price, img){
+        this.id = id
         this.name = name
         this.info = info
         this.price = price
@@ -37,6 +38,7 @@ export class Product{
         productBtn.innerHTML = "add to cart"
         productBtn.addEventListener("click", () => {
             NewCart.addProduct(this)
+            console.log(this)
             console.log(NewCart.getCartItems())
             const cartItems = NewCart.getCartItems()
             localStorage.setItem("cart", JSON.stringify(cartItems))

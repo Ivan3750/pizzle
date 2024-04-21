@@ -1,5 +1,5 @@
 import { Product } from "../script/Product.js";
-
+let Index = 0
 fetch('../data/products.json')
   .then(response => {
     if (!response.ok) {
@@ -9,7 +9,8 @@ fetch('../data/products.json')
   })
   .then(data => {
     for(let element of data){
-      let product = new Product(element.name, element.info, element.price, element.img);
+      let product = new Product(++Index, element.name, element.info, element.price, element.img);
+      console.log(product)
     }
   })
   .catch(error => {
