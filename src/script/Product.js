@@ -1,14 +1,31 @@
-import { Cart } from "../script/Cart.js";
-const NewCart = new Cart
 
+
+
+/**
+ *
+ *
+ * @class Product 
+ * This class is used to create a product card in Shop page
+ */
+
+import { Cart } from "../script/Cart.js";
+import { cartInstance } from "../script/Cart.js";
+const cartProductNumber = document.querySelector('.products-number');
+
+/* import {Cart} from "../script/Cart.js"
+ */
 const productsBlock = document.querySelector('.shop__products__main');
+
 export class Product{
-    constructor(id,name, info, price, img){
+    constructor(id,name,amount,info,price,img){
         this.id = id
         this.name = name
+        this.amount = amount
         this.info = info
         this.price = price
         this.img = img
+
+
 
         const productCard = document.createElement("div")
         productCard.classList.add("product-card")
@@ -36,22 +53,22 @@ export class Product{
         const productBtn = document.createElement("button")
         productBtn.classList.add("product-btn")
         productBtn.innerHTML = "add to cart"
-        productBtn.addEventListener("click", () => {
-            NewCart.addProduct(this)
-            console.log(this)
-            console.log(NewCart.getCartItems())
-            const cartItems = NewCart.getCartItems()
-            localStorage.setItem("cart", JSON.stringify(cartItems))
+        productBtn.addEventListener("click", ()=>{
+            console.log(cartInstance)
+            cartInstance.addProduct(this)            
+            cartProductNumber.innerHTML = JSON.parse(localStorage.cart).products.length
+
 
         })
+
+
         productsBlock.append(productCard)
         productCard.append(productImg,productName,productInfo,productPrice,productBtn)
-
     }
-    
-  
-
-
 }
 
 
+
+
+
+cartProductNumber.innerHTML = JSON.parse(localStorage.cart).products.length

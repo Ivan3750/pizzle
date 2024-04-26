@@ -191,3 +191,20 @@
         top: 120px;
     }
  }
+
+ .products-number{
+    width: 20px;
+    height: 20px;
+    color: #ddd;
+    background-color: #f7b035;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+}
+
+.cart-link{
+    position: relative;
+}

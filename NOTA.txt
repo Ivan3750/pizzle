@@ -1,0 +1,29 @@
+You must remove new Cart in page Cart
+
+
+Files =>{
+    
+    Cart.js => create cart 
+    CartView.js => create cart to HTML 
+    Product.js => create product 
+    products.js => create products from Product.js to Product.js
+}
+
+
+localStorage => { 
+    SaveCart => as Class => {
+        products
+    }
+    cart => products
+
+
+    MD
+    SaveCart === cart(r) 
+}
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 import { Product } from "../script/Product.js";
-let Index = 0
+let Index = 0 /* You must change */
+
 fetch('../data/products.json')
   .then(response => {
     if (!response.ok) {
@@ -9,10 +10,11 @@ fetch('../data/products.json')
   })
   .then(data => {
     for(let element of data){
-      let product = new Product(++Index, element.name, element.info, element.price, element.img);
-      console.log(product)
+      new Product(Index++, element.name, 1, element.info, element.price, element.img); /*  Створюємо продукт та публікуємо на сайт */
     }
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
   });
+
+
