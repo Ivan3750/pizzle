@@ -1,86 +1,113 @@
 [
     {
+        "id": 0,
         "name": "BBQ Pizza TinTin",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "10.99",
-        "img": "../assets/images/products/pizza_slide_4.png"
+        "img": "../assets/images/products/pizza_slide_4.png",
+        "category": ["Pizza"]
         
     },
     {
+
+        "id": 1,
         "name": "Chocolate Donuts",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "22.70",
-        "img": "../assets/images/products/pizza_slide_2.png"
+        "img": "../assets/images/products/pizza_slide_2.png",
+        "category": ["Pizza"]
         
     },
     {
+        "id": 2,
         "name": "Lemon Juice",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "12.30",
-        "img": "../assets/images/products/juice_1.png"
+        "img": "../assets/images/products/juice_1.png",
+        "category": ["Drinks"]
         
     },
     {
+        "id": 3,
         "name": "Coke Soft Drinks",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "13.60",
-        "img": "../assets/images/products/juice_3.png"
+        "img": "../assets/images/products/juice_3.png",
+        "category": ["Drinks"]
+
         
     },
     {
+        "id": 4,
         "name": "Orange Juice",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "10.20",
-        "img": "../assets/images/products/juice_2.png"
+        "img": "../assets/images/products/juice_2.png",
+        "category": ["Drinks"]
+
         
     },
     {
+        "id": 5,
         "name": "Chicken Hamburger",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "40.30",
-        "img": "../assets/images/products/bugar_2.png"
+        "img": "../assets/images/products/bugar_2.png",
+        "category": ["Sandwich","Chicken"]
         
     },
     {
+        "id": 6,
         "name": "Bolognese Pasta",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "15.30",
-        "img": "../assets/images/products/pasta.png"
+        "img": "../assets/images/products/pasta.png",
+        "category": ["Pasta"]
         
     },
     {
+        "id": 7,
         "name": "Greek Salad",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "07.40",
-        "img": "../assets/images/products/salad_1.png"
+        "img": "../assets/images/products/salad_1.png",
+        "category": ["Salad"]
         
     },
     {
+        "id": 8,
         "name": "Flavour Cream Ice",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "14.20",
-        "img": "../assets/images/products/ice-cream-2.png"
+        "img": "../assets/images/products/ice-cream-2.png",
+        "category": ["Desserts"]
         
     },
     {
+        "id": 9,
         "name": "Vanilla Ice Cream",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "13.30",
-        "img": "../assets/images/products/ice-cream-1.png"
+        "img": "../assets/images/products/ice-cream-1.png",
+        "category": ["Desserts"]
         
     },
     {
+        "id": 10,
         "name": "Black Hamburger",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "42.10",
-        "img": "../assets/images/products/burgur-1.png"
+        "img": "../assets/images/products/burgur-1.png",
+        "category": ["Sandwich"]
         
     },
     {
+        "id": 11,
         "name": "BBQ Pizza TinTin",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "24.00",
-        "img": "../assets/images/products/pizza_slide_4 (1).png"
+        "img": "../assets/images/products/pizza_slide_4 (1).png",
+        "category": ["Pizza"]
         
     }
 ]

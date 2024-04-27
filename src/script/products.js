@@ -1,5 +1,6 @@
 import { Product } from "../script/Product.js";
-let Index = 0 /* You must change */
+let Index = 0 
+localStorage.setItem("lastIndex", Index)
 
 fetch('../data/products.json')
   .then(response => {
@@ -10,7 +11,7 @@ fetch('../data/products.json')
   })
   .then(data => {
     for(let element of data){
-      new Product(Index++, element.name, 1, element.info, element.price, element.img); /*  Створюємо продукт та публікуємо на сайт */
+      new Product(element.id, element.name, 1, element.info, element.price, element.img); /*  Створюємо продукт та публікуємо на сайт */
     }
   })
   .catch(error => {
