@@ -1,6 +1,8 @@
 @use "importer" as s;
 
-
+*{
+    color: #000;
+}
 .header{
     box-sizing: border-box;
     width: 100%;
@@ -169,4 +171,8 @@
         }
     }
     
+}
+
+*{
+    color: #000;
 }

@@ -1,0 +1,30 @@
+
+.mask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 1000;
+}
+.mask.hide{
+    display: none;
+    
+}
+.load-img{
+    animation: 10s load infinite alternate;
+    width: 200px;
+    height: auto;
+    
+}
+@keyframes load {
+    0%{
+        transform: translate(-1500px);
+    }
+    100%{
+        transform: translate(1500px);
+
+    }
+}

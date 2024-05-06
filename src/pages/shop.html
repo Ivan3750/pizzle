@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <link rel="shortcut icon" href="../assets/icons/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../styles/standart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../styles/shop.css">
-    <link rel="stylesheet" href="../styles/standart.css">
 
 </head>
 <body>
@@ -52,6 +54,7 @@
                         <li class="shop__sidebar__category__list-element">Pizza</li> 
                         <li class="shop__sidebar__category__list-element">Salad</li> 
                         <li class="shop__sidebar__category__list-element">Pasta</li> 
+                        <li class="shop__sidebar__category__list-element">Another</li> 
                     </ul>
                 </div>
             </div>
@@ -72,13 +75,45 @@
                 </div>
             </div>
         </section>
+        <div class="modal-product-info-block">
+            <div class="modal-product">
+                <img src="../assets/icons/icons8-close-100 (1).png" alt="" class="modal-product-close">
+                <div class="modal-product-img-box">
+                    <img src="../assets/images/products/bugar_2.png" alt="" class="modal-product-img">
+                </div>
+                <div class="modal-product-info-box">
+                    <h4 class="modal-product-name">Chicken Hamburger</h4>
+                    <p class="modal-product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                    <div class="modal-product-box-size">
+                        <button class="product-btn-size" id="product-lg">Large</button>
+                    <button class="product-btn-size" id="product-md">Medium</button>
+                    <button class="product-btn-size active" id="product-sm">Small</button>
+                    </div>
+                   
+                    <div class="modal-product-box-price"> <div class="modal-product-box-input">
+                        <p class="input-minus">-</p>
+                        <p class="input-number">1</p>
+                        <p class="input-plus">+</p>
+                    </div>
+                    <p class="modal-product-price">£ 40.00</p>
+                </div>
+                <button class="modal-product-add">Add to cart</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer id="footer" class="footer"></footer>
-    <script type="module" src="../script/search.js"></script>
-    <script type="module" src="../script/Cart.js"></script>
-    <script src="../script/onload.js"></script>
-    <script type="module" src="../script/category.js"></script>
-    <script type="module" src="../script/Product.js"></script>
-    <script  type="module"src="../script/products.js"></script>
+
+
+
+
+    <script src="../script/Utils/onload.js"></script>
+    <script type="module" src="../script/Utils/search.js"></script>
+    <script type="module" src="../script/Classes/Cart.js"></script>
+    <script type="module" src="../script/Utils/category.js"></script>
+    <script type="module" src="../script/Classes/Product.js"></script>
+    <script type="module" src="../script/Init/products.js"></script>
+    <script type="module" src="../script/Init/shop.js"></script>
+    <script type="module" src="../script/Utils/modal.js"></script>
 </body>
 </html>

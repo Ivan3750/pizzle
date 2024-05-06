@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/css?family=Unbounded:200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Delius+Unicase:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+.mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  z-index: 1000;
+}
+
+.mask.hide {
+  display: none;
+}
+
+.load-img {
+  animation: 10s load infinite alternate;
+  width: 200px;
+  height: auto;
+}
+
+@keyframes load {
+  0% {
+    transform: translate(-1500px);
+  }
+  100% {
+    transform: translate(1500px);
+  }
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  color: transparent;
+  scrollbar-color: #f7b035 #2e2e2e;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f7b035;
+  border-radius: 64px;
+  border: 3px dotted #ff0000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: Unbounded;
+}
+
+* {
+  color: #000;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes garlicAnimation {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes tomatoAnimation {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes leaf {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes leafAnimation {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/* 
+
+*{
+
+    outline: 2px solid #000;
+}
+ */
+.product {
+  display: flex;
+  padding: 100px 60px;
+  justify-content: center;
+  gap: 40px;
+}
+.product-img {
+  width: 500px;
+}
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 600px;
+}
+.product__details-title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #000;
+  font-size: 38px;
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+}
+.product__details-price {
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #f7b035;
+  margin-left: 25px;
+}
+.product__details-amount-box {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0px;
+}
+.product__details-block {
+  color: #000;
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  gap: 25px;
+  padding: 25px 0px;
+  border-bottom: 1px solid #818181;
+}
+.product__details-block span {
+  font-weight: 700;
+  color: #000;
+  margin-left: 10px;
+}
+.product__details-block p {
+  color: #000;
+}
+.product__details__details__size-box {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.product-info {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #828282;
+  margin: 20px 0px;
+}
+
+.product-btn-size {
+  background-color: #fff;
+  border: 1px solid #979797;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #828282;
+  transition: 0.3s;
+  padding: 10px;
+}
+.product-btn-size:hover {
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  color: #f7b035;
+  border: 1px solid #f7b035;
+  background-color: #f7b035;
+  color: #fff;
+}
+.product-btn-size .product-btn-size.active {
+  background-color: antiquewhite;
+}
+
+.product-add {
+  display: inline-block;
+  padding: 13px 30px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  overflow: hidden;
+  background: #f7b035;
+  border-radius: 40px;
+  font-family: "Rubik", sans-serif;
+}
+.product-add:hover {
+  color: #000;
+  transition: 0.5s;
+}
+
+.product__details-size-txt {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+
+.product-btn-size.active {
+  border: 1px solid #f7b035;
+  background-color: #f7b035;
+  color: #fff;
+}/*# sourceMappingURL=product.css.map */

@@ -1,5 +1,5 @@
 
-import { CartView } from "../script/CartView.js";
+import { CartView } from "../Classes/CartView.js";
 
 const cart = JSON.parse(localStorage.getItem("cart"))
 const cartItems = cart.products /* This must be Nothing */

@@ -1,0 +1,149 @@
+@use "importer" as s;
+
+
+body{
+}
+/* 
+
+*{
+
+    outline: 2px solid #000;
+}
+ */
+
+.product{
+    display: flex;
+    padding: 100px 60px;
+    justify-content: center;
+    gap: 40px;
+    &-img{
+        width: 500px;
+    }
+    
+    &__details{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 600px;
+        &-title{
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: #000;
+            font-size: 38px;
+            text-transform: capitalize;
+            font-family: 'Rubik', sans-serif;
+
+        }
+        &-price{
+            font-family: 'Rubik', sans-serif;
+            font-size: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #f7b035;
+            margin-left: 25px;
+        }
+        &-amount-box{
+            display: flex;
+            gap: 10px;
+            margin: 20px 0px;
+        }
+
+
+        &-block{
+            color: #000;
+            display: flex;
+            font-family: 'Rubik', sans-serif;
+            font-size: 12px;
+            gap: 25px;
+            padding: 25px 0px;
+            border-bottom: 1px solid #818181;
+        }
+
+        &-block span{
+            font-weight: 700;
+            color: #000;
+            margin-left: 10px;
+        }
+        &-block p{
+            color: #000;
+           
+        }
+
+
+        &__details__size-box{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        
+    }
+    &-info{
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #828282;
+        margin: 20px 0px;
+    }
+
+ 
+
+}
+
+.product-btn-size{
+    background-color: #fff;
+    border: 1px solid #979797;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #828282;
+    transition: 0.3s;
+    padding: 10px;
+    &:hover{
+        padding: 15px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #f7b035;
+        border: 1px solid #f7b035;
+        background-color: #f7b035;
+        color: #fff;
+
+    }
+    .product-btn-size.active{
+        background-color: antiquewhite;
+    }
+}
+
+.product-add{
+    display: inline-block;
+    padding: 13px 30px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    overflow: hidden;
+    background: #f7b035;
+    border-radius: 40px;
+    font-family: 'Rubik', sans-serif;
+    &:hover{
+        color: #000;
+        transition: 0.5s;
+    }
+}
+
+.product__details-size-txt{
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+
+.product-btn-size.active{
+    border: 1px solid #f7b035;
+    background-color: #f7b035;
+    color: #fff;
+}
+
+
+
+
+

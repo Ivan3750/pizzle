@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming soon...</title>
+    <link rel="shortcut icon" href="../assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/news.css">
+    <link rel="stylesheet" href="../styles/standart.css">
+
+    <title>News</title>
 </head>
 <body>
-    <p>We are currently working on this web page. You have to wait a few weeks</p>
+    <header id="headerB" class="header">
+        <a href="../pages/index.html">
+            <img src="../assets/images/home/footer_logo.png" alt="" class="header__logo">
+        </a>
+        <nav class="header__nav">
+            <a href="../pages/index.html" class="header__nav-element" style="color: black;">Home</a>
+            <a href="../pages/shop.html" class="header__nav-element" style="color: black;">Shop</a>
+            <a href="../pages/news.html" class="header__nav-element" style="color: black;">News</a>
+        </nav>
+        <div class=""></div>
+        <!-- <a href="../pages/cart.html" class="cart-link">
+            <img src="../assets/images/home/shopping-bag-black.svg" alt="" class="header__cart">
+            <p class="products-number">0</p>
+        </a> -->
+    
+    
+    </header>
+    <main>
+        <section class="title__section">
+            <h3 class="title">News</h3>
+        </section>
+        <section class="news-block"></section>
+    </main>
+    <section id="subscribe" class="subscribe"></section>
+
+    <footer id="footer" class="footer"></footer>
+
+
+<!--     <script src="../script/Utils/load.js"></script>
+ -->    <script src="../script/Utils/onload.js"></script>
+    <script type="module" src="../script/Classes/News.js"></script>
+    <script type="module" src="../script/Init/loadNews.js"></script>
 </body>
 </html>

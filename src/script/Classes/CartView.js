@@ -1,5 +1,5 @@
 const cartBody = document.querySelector('.cart-table__body');
-import { cartInstance } from "../script/Cart.js";
+import { cartInstance } from "../Classes/Cart.js";
 const DeliveryPrice = 0
 
 export class CartView{

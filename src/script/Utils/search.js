@@ -1,4 +1,4 @@
-import { Product } from "../script/Product.js";
+import { Product } from "../Classes/Product.js";
 
 const searchInput = document.querySelector('.shop__sidebar__searchbar-input');
 const searchBtn = document.querySelector('.shop__sidebar__searchbar-btn');

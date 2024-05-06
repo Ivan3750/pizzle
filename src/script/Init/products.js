@@ -1,4 +1,4 @@
-import { Product } from "../script/Product.js";
+import { Product } from "../Classes/Product.js";
 let Index = 0 
 localStorage.setItem("lastIndex", Index)
 
@@ -11,7 +11,7 @@ fetch('../data/products.json')
   })
   .then(data => {
     for(let element of data){
-      new Product(element.id, element.name, 1, element.info, element.price, element.img); /*  Створюємо продукт та публікуємо на сайт */
+      new Product(element.id, element.name, 1, element.info, element.price, element.img,"Medium", element.weight[1]); /*  Створюємо продукт та публікуємо на сайт */
     }
   })
   .catch(error => {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slick Slider Center Mode Example</title>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <style>
+    /* Custom styles for center mode */
+    .slick-slider {
+      margin: 0 auto;
+      width: 80%;
+    }
+    .slick-slide {
+      margin: 0 10px; /* Adjust the spacing as needed */
+    }
+    .slick-prev, .slick-next {
+      font-size: 1.5em;
+    }
+    .slick-slider{
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<!-- Slick Slider JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+<script>
+  
+  
+
+  // Get the SVG element
+var svg = document.querySelector('.slick-prev');
+
+// Check if the SVG element is loaded
+var svgDoc = svg.contentDocument;
+
+// Select all <path> elements within the SVG
+var paths = svgDoc.querySelectorAll('path');
+
+// Loop through each <path> element and change its fill color
+paths.forEach(function(path) {
+    // Change the fill color to your desired color (e.g., red)
+    path.setAttribute('fill', 'red');
+});
+/* svg.onload = function() {
+    // Get the SVG document
+}; */
+
+</script>
+
+</body>
+</html>

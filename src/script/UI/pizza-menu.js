@@ -8,14 +8,12 @@ window.addEventListener("scroll", ()=>{
     if(window.scrollY > 2300 && window.scrollY < 2700 ){
         positionY = ((window.scrollY - standard) - 2300)
         menuPizza.style.transform = `translateY(${positionY/2}px)`
-        console.log(positionY)
     }
     
-}) /* 
+}) 
 
-*! This work only with scroll
 
-*/
+/* When I repload page come error */
 
 window.addEventListener("load", ()=>{
 

@@ -9,6 +9,7 @@
   "author": "Ivan Kohan",
   "license": "ISC",
   "dependencies": {
+    "@glidejs/glide": "^3.6.0",
     "parcel": "^2.12.0"
   }
 }

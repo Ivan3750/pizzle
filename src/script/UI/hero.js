@@ -5,6 +5,13 @@ const pizzaPosition = {
     down:[-208.4,69.3333]
 } 
 
+
+window.addEventListener("load", ()=>{
+    pizzaUp.style.transform = `translate(-${-window.scrollY - pizzaPosition.up[0] }px,${window.scrollY/7 - pizzaPosition.up[1]}px)`
+    pizzaDown.style.transform = `translate(-${-window.scrollY - pizzaPosition.down[0] }px,${pizzaPosition.down[1] - window.scrollY/3}px)`
+
+})
+
 window.addEventListener("scroll", ()=>{
 
          pizzaUp.style.transform = `translate(-${-window.scrollY - pizzaPosition.up[0] }px,${window.scrollY/7 - pizzaPosition.up[1]}px)`

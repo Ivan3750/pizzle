@@ -2,7 +2,7 @@ const categoryElements = document.querySelectorAll('.shop__sidebar__category__li
 const productsMain = document.querySelector('.shop__products__main');
 
 
-import { Product } from "../script/Product.js";
+import { Product } from "../Classes/Product.js";
 
 fetch('../data/products.json')
   .then(response => {
