@@ -11,6 +11,7 @@
  */
 
     const modalBlock = document.querySelector('.modal-product-info-block');
+    const notification = document.querySelector('.notification');
 
 import { Cart } from "./Cart.js";
 import { cartInstance } from "./Cart.js";
@@ -68,6 +69,7 @@ export class Product{
             modalBlock.classList.add("show")
             sessionStorage.setItem("activeProduct", this.id)
             loadProductModal()
+            
 /*             cartInstance.addProduct(this)             
  */           /*  console.log(modalBlock)
             console.log(cartInstance) */

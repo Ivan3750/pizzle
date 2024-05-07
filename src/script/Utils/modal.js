@@ -1,6 +1,6 @@
 import {Cart} from "../Classes/Cart.js"
 import {cartInstance} from "../Classes/Cart.js"
-
+const notification = document.querySelector('.notification');
 export function loadProductModal() {
     const modalBlock = document.querySelector('.modal-product-info-block');
     const modalProductName = document.querySelector('.modal-product-name');
@@ -45,10 +45,14 @@ export function loadProductModal() {
         productObj.id = activeProduct.id 
         productObj.name = activeProduct.name
         productObj.info = activeProduct.info
-        productObj.price = (activeProduct.price * amount).toFixed(2)
+        productObj.price = activeProduct.price 
         productObj.img = activeProduct.img
         productObj.size = "Medium"
         productObj.weight = "0g"
+        notification.classList.add("active")
+            setTimeout(()=>{
+                notification.classList.remove("active")
+            },2000)
 
 
             console.log(cartInstance)
