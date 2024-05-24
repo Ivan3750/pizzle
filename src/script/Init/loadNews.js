@@ -1,20 +1,11 @@
 import { News } from "../Classes/News.js";
 
-fetch('../data/news.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    for(let element of data){
+const JSON = require("../../data/news.json")
+for(let element of JSON){
 
-      new News(element.title, element.info, element.dato, element.tag, element.img);
-    }
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-  });
+  new News(element.title, element.info, element.dato, element.tag, element.img);
+}
+console.log(JSON)
+"/assets/images/news/free-delivery.jpg"
 
 

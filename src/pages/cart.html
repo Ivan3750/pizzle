@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link rel="stylesheet" href="../styles/standart.css">
-    <link rel="stylesheet" href="../styles/cart.css">
+
     <link rel="shortcut icon" href="../assets/icons/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header id="headerB" class="header">
-        <a href="../pages/index.html">
+        <a href="index.html">
             <img src="../assets/images/home/footer_logo.png" alt="" class="header__logo">
         </a>
         <nav class="header__nav">
-            <a href="../pages/index.html" class="header__nav-element" style="color: black;">Home</a>
-            <a href="../pages/shop.html" class="header__nav-element" style="color: black;">Shop</a>
-            <a href="../pages/news.html" class="header__nav-element" style="color: black;">News</a>
+            <a href="index.html" class="header__nav-element" style="color: black;">Home</a>
+            <a href="shop.html" class="header__nav-element" style="color: black;">Shop</a>
+            <a href="news.html" class="header__nav-element" style="color: black;">News</a>
         </nav>
         <div class=""></div>
     
@@ -70,6 +69,9 @@
                     <p class="total__box-price">0</p>
                 </div>
                 <button class="remove-all-btn">Remove all</button>
+                <a href="./order.html">
+                    <button class="order-btn">Order</button>
+                </a>
             </div>
         </section>
     </main>
@@ -78,10 +80,8 @@
 
 
 
-    <script src="../script/Utils/onload.js"></script>
-    <script type="module" src="../script/Classes/CartView.js"></script>
-    <script type="module" src="../script/Init/cartPage.js"></script>
-    <script type="module" src="../script/Classes/Cart.js"></script>
+    <script src="../script/modules/cart.js"></script>
+   
   
 
 </body>

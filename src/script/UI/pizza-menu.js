@@ -1,6 +1,5 @@
 const menuPizza = document.querySelector('.food-menu__pizza');
 
-
 let positionY = 0;
 let standard = 500
 
@@ -21,4 +20,5 @@ window.addEventListener("load", ()=>{
         menuPizza.style.transform = `translateY(-50px)`
     }
 })
+
 

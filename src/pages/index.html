@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-/
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    
-    <link rel="stylesheet" href="../styles/main.css">
+    <!--     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/standart.css">
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <link rel="stylesheet" href="../styles/slider.css">
-    <link rel="shortcut icon" href="../assets/icons/favicon.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="../styles/slider.css"> -->
+    <link rel="shortcut icon" href="'../assets/icons/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="mask">
+    <!--   <div class="mask">
         <div class="load">
-            <img src="../assets/images/components/delivery_bike.png" alt="" class="load-img">
+            <img src="<%= require('../assets/images/components/delivery_bike.png" alt="" class="load-img">
         </div>
-    </div>
+    </div> -->
     <div class="background"></div>
     <header id="headerW" class="header">
-
+        <a href="index.html">
+            <img src="../assets/images/home/logo.png" alt="" class="header__logo">
+        </a>
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav-element">Home</a>
+            <a href="shop.html" class="header__nav-element">Shop</a>
+            <a href="news.html" class="header__nav-element">News</a>
+        </nav>
+        <a href="cart.html" class="cart-link">
+            <img src="../assets/images/home/shopping-bag.svg" alt="" class="header__cart">
+            <p class="products-number">0</p>
+        </a>
+        
     </header>
     <main class="main">
         <section class="hero">
@@ -35,12 +44,16 @@
                 <button class="hero__left-btn btn-order-now">Order Now</button>
             </div>
             <div class="hero__right">
-                <img src="../assets/images/home/hero_pizza.png" alt="" class="hero__right-pizza">
-                <img src="../assets/images/home/hero_pizza (1).png" alt="" class="hero__right-pizza-1">
-                <img src="../assets/images/home/hero_pizza (2).png" alt="" class="hero__right-pizza-2">
-                <img src="../assets/images/home/hero_shape_1 (1).png" alt="" class="hero__right-shape">
+                <img src="../assets/images/home/hero_pizza.png" alt="pizza" class="hero__right-pizza">
+                <img src="../assets/images/home/hero_pizza (1).png" alt=""
+                    class="hero__right-pizza-1">
+                <img src="../assets/images/home/hero_pizza (2).png" alt=""
+                    class="hero__right-pizza-2">
+                <img src="../assets/images/home/hero_shape_1 (1).png" alt=""
+                    class="hero__right-shape">
                 <img src="../assets/images/home/hero_shape_4.png" alt="" class="hero__right-tomato">
-                <img src="../assets/images/home/hero_shape_3.png" alt="" class="hero__right-mushrooms">
+                <img src="../assets/images/home/hero_shape_3.png" alt=""
+                    class="hero__right-mushrooms">
                 <img src="../assets/images/home/hero_shape_2.png" alt="" class="hero__right-garlic">
             </div>
         </section>
@@ -61,15 +74,18 @@
         </section>
         <section class="best-pizza">
             <div class="best-pizza__left">
-                <img src="../assets/images/home/best_pizza_2.png" alt="" class="best-pizza__left-pizza">
-                <img src="../assets/images/home/best_pizza_tomato.png" alt="" class="best-pizza__left-tomato">
+                <img src="../assets/images/home/best_pizza_2.png" alt=""
+                    class="best-pizza__left-pizza">
+                <img src="../assets/images/home/best_pizza_tomato.png" alt=""
+                    class="best-pizza__left-tomato">
             </div>
             <div class="best-pizza__right">
                 <div class="best-pizza__right-title">
                     <span class="best-pizza__right-span-st">THE BEST</span>
                     <span class="best-pizza__right-span-bt">PIZZA</span>
                     <span class="best-pizza__right-span-ed">ARROUND</span>
-                    <img src="../assets/images/home/section_delimiter.png" alt="" class="best-pizza__right-img">
+                    <img src="../assets/images/home/section_delimiter.png" alt=""
+                        class="best-pizza__right-img">
                 </div>
                 <p class="best-pizza__right-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
@@ -82,13 +98,15 @@
             <div class="slider__text">
                 <p class="slider__text-subtitle">Fresh Quality</p>
                 <p class="slider__text-title">We Offer People Best Way <br> To Eat Best Food</p>
-                <img src="../assets/images/home/section_delimiter.png" alt="" class="slider__text-img">
+                <img src="../assets/images/home/section_delimiter.png" alt=""
+                    class="slider__text-img">
             </div>
             <div class="slider__body">
                 <div class="slick-slider">
                     <div>
                         <div class="product-card"><img class="product-img"
-                                src="../assets/images/products/pizza_slide_4.png" style="width: 224px;">
+                                src="../assets/images/products/pizza_slide_4.png"
+                                style="width: 224px;">
                             <h4 class="product-name">BBQ Pizza TinTin</h4>
                             <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
                             <p class="product-price">10.99 £</p><button class="product-btn">view</button>
@@ -96,7 +114,8 @@
                     </div>
                     <div>
                         <div class="product-card"><img class="product-img"
-                                src="../assets/images/products/pizza_slide_2.png" style="width: 224px;">
+                                src="../assets/images/products/pizza_slide_2.png"
+                                style="width: 224px;">
                             <h4 class="product-name">Chocolate Donuts</h4>
                             <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
                             <p class="product-price">22.70 £</p><button class="product-btn">view</button>
@@ -115,31 +134,9 @@
                                 src="../assets/images/products/juice_3.png" style="width: 224px;">
                             <h4 class="product-name">Coke Soft Drinks</h4>
                             <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
-                            <p class="product-price">13.60 £</p><button class="product-btn">view</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-card"><img class="product-img"
-                                src="../assets/images/products/bugar_2.png" style="width: 224px;">
-                            <h4 class="product-name">Chicken Hamburger</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
-                            <p class="product-price">40.30 £</p><button class="product-btn">view</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-card"><img class="product-img"
-                                src="../assets/images/products/ice-cream-2.png" style="width: 224px;">
-                            <h4 class="product-name">Flavour Cream Ice</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
-                            <p class="product-price">14.20 £</p><button class="product-btn">view</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-card"><img class="product-img"
-                                src="../assets/images/products/burgur-1.png" style="width: 224px;">
-                            <h4 class="product-name">Black Hamburger</h4>
-                            <p class="product-info">Gourmet burger with arugula, feta cheese, quail eggs and...</p>
-                            <p class="product-price">42.10 £</p><button class="product-btn">view</button>
+                            <p class="product-price">13.60 £</p><button class="product-btn">view
+                                </p>
+                                <p class="product-price">42.10 £</p><button class="product-btn">view</button>
                         </div>
                     </div>
                 </div>
@@ -204,9 +201,9 @@
                 <span class="food-menu__center-span-st">FRESHLY MADE</span>
                 <span class="food-menu__center-span-bt">PIZZA</span>
                 <span class="food-menu__center-span-ed">MENU</span>
-                <P class="food-menu__center-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                <p class="food-menu__center-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                     nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                </P>
+                </p>
             </div>
             <div class="food-menu__right">
                 <h3 class="menu__right-title">
@@ -262,24 +259,83 @@
                 </div>
             </div>
         </section>
-        <section id="subscribe" class="subscribe"></section>
+        
+        <section id="subscribe" class="subscribe">
+            
+    <p class="subscribe__subtitle">Don’t Miss
+    </p>
+    <h3 class="subscribe__title">Subsribe To Newsletter
+    </h3>
+    <div class="subscribe__input-box">
+        <input type="email" class="subscribe__input" placeholder="Enter your E-mail">
+        <button class="subscribe__btn">subscribe</button>
+    </div>
+
+        </section>
     </main>
-    <footer id="footer" class="footer"></footer>
-
-
-
-    
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="../script/Utils/load.js"></script>
+    <footer id="footer" class="footer">
+        <div class="footer__customer">
+            <h3 class="footer__customer__title">
+                Customer
+            </h3>
+            <ul class="footer__customer__list">
+                <li class="footer__customer__list-element">Wishlist</li>
+                <li class="footer__customer__list-element">Privacy Policy</li>
+                <li class="footer__customer__list-element">Order Tracking</li>
+                <li class="footer__customer__list-element">Delivery Option</li>
+            </ul>
+        </div>
+        <div class="footer__info">
+            <img src="../assets/images/home/footer_logo.png" alt="" class="footer__info__logo">
+            <p class="footer__info-adressa">44 Canal Center Plaza #200, Alexandria
+                VA 22314, USA</p>
+            <div class="footer__info__box">
+                <p class="footer__info__box-name">Hotline :</p>
+                <p class="footer__info__box-phone">1900 – 123 456 78</p>
+            </div>
+            <div class="footer__info__box">
+                <p class="footer__info__box-name">Email: </p>
+                <p class="footer__info__box-email">info@example.com</p>
+            </div>
+        </div>
+        <div class="footer__time">
+            <h3 class="footer__time__title">Opening Hour</h3>
+            <div class="footer__time__block">
+                <div class="footer__time__box">
+                    <h3 class="footer__time__box-day">Mon - Fri:
+                    </h3>
+                    <p class="footer__time__box-time">09:00 – 23:00h
+                    </p>
+                </div>
+                <div class="footer__time__box">
+                    <h3 class="footer__time__box-day">Saturday:
+                    </h3>
+                    <p class="footer__time__box-time">09:00 – 16:00h
+                    </p>
+                </div>
+                <div class="footer__time__box">
+                    <h3 class="footer__time__box-day">Sunday:
+                    </h3>
+                    <p class="footer__time__box-time">12:00 – 18:00h
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
     <script src="../script/Utils/onload.js"></script>
-    <script src="../script/Utils/cartIndex.js"></script>
-    <script src="../script/UI/hero.js"></script>
-    <script src="../script/UI/pizza-menu.js"></script>
-    <script src="../script/UI/slider.js"></script>
 
+    <!--     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+                                <script src="../script/Utils/load.js"></script>
+                                <script src="../script/Utils/cartIndex.js"></script>
+                                <script src="../script/UI/hero.js"></script>
+                                <script src="../script/UI/pizza-menu.js"></script>
+                                <script src="../script/UI/slider.js"></script>
+                                <script src="../script/UI/test.js"></script>
+                            -->
+    <script  src="../script/modules/index.js"></script>
 </body>
 
 </html>
+

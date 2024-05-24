@@ -20,6 +20,7 @@ const cartProductNumber = document.querySelector('.products-number');
 
 /* import {Cart} from "../script/Cart.js"
  */
+
 const productsBlock = document.querySelector('.shop__products__main');
 
 export class Product{
@@ -33,6 +34,7 @@ export class Product{
         this.size = size
         this.weight = weight
 
+        
 
 
         const productCard = document.createElement("div")
@@ -58,7 +60,8 @@ export class Product{
 
         const productImg = document.createElement("img")
         productImg.classList.add("product-img")
-        productImg.src = this.img
+        console.log()
+        productImg.src = require(`../../assets/images/products/${this.img}`);
         productImg.style.width = `224px`
         productImg.style.style = `224px`
 

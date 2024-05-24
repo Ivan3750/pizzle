@@ -14,7 +14,8 @@ export class News {
         
         let newsImg = document.createElement("img");
         newsImg.classList.add("news-img");
-        newsImg.src = this.img
+
+        newsImg.src = require(`../../assets/images/news/${this.img}`)
         
 
         let newsBox = document.createElement("div")

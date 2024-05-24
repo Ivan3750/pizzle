@@ -9,15 +9,15 @@ function getSearch(){
 }
 
 
-
-fetch("../data/products.json")
+const data =  require("../../data/products.json")
+/* fetch("../data/products.json")
 .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
     return response.json();
   })
-  .then(data => {
+  .then(data => { */
     
     searchBtn.addEventListener("click", ()=>{
         search()
@@ -37,7 +37,6 @@ fetch("../data/products.json")
                 console.log(product.name)
             }else{
                 if(productsMain.innerHTML.trim() === '' && index === data.length - 1){
-                    console.log(isFound)
                     productsMain.innerHTML = "Nothing"
                 }
 
@@ -46,8 +45,8 @@ fetch("../data/products.json")
     }
    
 
-  })
+/*   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
-  });
+  }); */
 

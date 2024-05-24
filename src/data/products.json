@@ -4,7 +4,7 @@
         "name": "BBQ Pizza TinTin",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "10.99",
-        "img": "../assets/images/products/pizza_slide_4.png",
+        "img": "pizza_slide_4.png",
         "category": ["Pizza"],
         "size": ["20cm","30cm","40cm"],
         "weight": ["400g","500g","600g"]
@@ -16,7 +16,7 @@
         "name": "Chocolate Donuts",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "22.70",
-        "img": "../assets/images/products/pizza_slide_2.png",
+        "img": "pizza_slide_2.png",
         "category": ["Pizza"],
         "size": ["20cm","30cm","40cm"],
         "weight": ["400g","500g","600g"]
@@ -27,7 +27,7 @@
         "name": "Lemon Juice",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "12.30",
-        "img": "../assets/images/products/juice_1.png",
+        "img": "juice_1.png",
         "category": ["Drinks"],
         "size": ["300ml","500ml","750ml"],
         "weight": "none"
@@ -38,7 +38,7 @@
         "name": "Coke Soft Drinks",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "13.60",
-        "img": "../assets/images/products/juice_3.png",
+        "img": "juice_3.png",
         "category": ["Drinks"],
         "size": ["300ml","500ml","750ml"],
         "weight": "none"
@@ -50,7 +50,7 @@
         "name": "Orange Juice",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "10.20",
-        "img": "../assets/images/products/juice_2.png",
+        "img": "juice_2.png",
         "category": ["Drinks"],
         "size": ["300ml","500ml","750ml"],
         "weight": "none"
@@ -62,7 +62,7 @@
         "name": "Chicken Hamburger",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "40.30",
-        "img": "../assets/images/products/bugar_2.png",
+        "img": "bugar_2.png",
         "category": ["Sandwich","Chicken"],
         "size": ["small","medium","large"],
         "weight": ["200g","300g","400g"]
@@ -73,7 +73,7 @@
         "name": "Bolognese Pasta",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "15.30",
-        "img": "../assets/images/products/pasta.png",
+        "img": "pasta.png",
         "category": ["Pasta"],
         "size": ["small","medium","large"],
         "weight": ["300g","500g","700g"]
@@ -84,7 +84,7 @@
         "name": "Greek Salad",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "07.40",
-        "img": "../assets/images/products/salad_1.png",
+        "img": "salad_1.png",
         "category": ["Salad"],
         "size": ["small","medium","large"],
         "weight": ["100g","300g","400g"]
@@ -95,7 +95,7 @@
         "name": "Flavour Cream Ice",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "14.20",
-        "img": "../assets/images/products/ice-cream-2.png",
+        "img": "ice-cream-2.png",
         "category": ["Desserts"],
         "size": ["small","medium","large"],
         "weight": ["150g","200g","250g"]
@@ -106,7 +106,7 @@
         "name": "Vanilla Ice Cream",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "13.30",
-        "img": "../assets/images/products/ice-cream-1.png",
+        "img": "ice-cream-1.png",
         "category": ["Desserts"],
         "size": ["small","medium","large"],
         "weight": ["150g","200g","250g"]
@@ -117,7 +117,7 @@
         "name": "Black Hamburger",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "42.10",
-        "img": "../assets/images/products/burgur-1.png",
+        "img": "burgur-1.png",
         "category": ["Sandwich"],
         "size": ["small","medium","large"],
         "weight": ["200g","300g","400g"]
@@ -128,7 +128,7 @@
         "name": "BBQ Pizza TinTin",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "24.00",
-        "img": "../assets/images/products/pizza_slide_4 (1).png",
+        "img": "pizza_slide_4 (1).png",
         "category": ["Pizza"],
         "size": ["20cm","30cm","40cm"],
         "weight": ["400g","500g","600g"]
@@ -139,7 +139,7 @@
         "name": "Hot Wings",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "36.70",
-        "img": "../assets/images/products/product-12.png",
+        "img": "product-12.png",
         "category": ["Another"],
         "size": "none",
         "weight": ["400g","500g","600g"]
@@ -150,7 +150,7 @@
         "name": "BBQ Pizza TinTin",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "27.10",
-        "img": "../assets/images/products/pizza-cheese.png",
+        "img": "pizza-cheese.png",
         "category": ["Pizza"],
         "size": ["20cm","30cm","40cm"],
         "weight": ["400g","500g","600g"]
@@ -161,10 +161,11 @@
         "name": "French Fries",
         "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
         "price": "16.70",
-        "img": "../assets/images/products/french-fries.webp",
+        "img": "french-fries.png",
         "category": ["Another"],
         "size": "none",
         "weight": ["400g","500g","600g"]
         
     }
+  
 ]

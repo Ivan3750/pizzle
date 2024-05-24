@@ -1,0 +1,172 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require('autoprefixer');
+
+module.exports = {
+  mode: 'development', // Build mode: production
+  target: "browserslist",
+  entry: {
+      index: "./src/script/modules/index.js",
+/*       shop: "./src/script/modules/shop.js",
+ */  }, // Your main JavaScript file
+  output: {
+    filename: "[name].js", // Output JavaScript file name
+    path: path.resolve(__dirname, "./src/dist"), // Output directory path
+    clean: true, // Clean the output directory before each build
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/pages/index.html',
+      filename: 'index.html',
+      /* chunks: ['index']  */// Додаємо тільки чанк для index.js
+    }),
+   /*  new HtmlWebpackPlugin({
+      template: './src/pages/shop.html',
+      filename: 'shop.html',
+      chunks: ['shop'] // Додаємо тільки чанк для shop.js
+    }), */
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css', // Output CSS file name
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true // Add source maps for styles
+            }
+          },
+          "sass-loader",
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  autoprefixer(), // Use autoprefixer with default options
+                ]
+              }
+            }
+          }
+        ],
+      },
+      /* {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      } */
+    ],
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'src/dist'), // Правильний шлях до папки dist
+    },
+    open: true,
+    compress: true,
+    port: 8400,
+    hot: true
+  },
+
+};
+
+
+
+/* 
+import "../../styles/main.scss"
+import "../../styles/standart.scss"
+import "../../styles/slider.scss"
+import "../../../node_modules/slick-carousel/slick/slick.css"
+import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+
+
+import load from "../Utils/load.js";
+import onload from '../Utils/onload.js';
+import cartIndex from '../Utils/cartIndex.js';
+import hero from '../UI/hero.js';
+import pizzaMenu from '../UI/pizza-menu.js';
+import test from '../UI/test.js';
+import $ from 'jquery'; // Slick Carousel depends on jQuery
+import 'slick-carousel/slick/slick';
+import slider from '../UI/slider.js';
+
+const load = require("../Utils/load.js")
+const onload = require("../Utils/onload.js")
+const cartIndex = require("../Utils/cartIndex.js")
+const hero = require("../UI/hero.js")
+const  pizzaMenu = require("../UI/pizza-menu.js")
+const slider = require("../UI/slider.js")
+const $ = require('jquery'); */
+
+
+
+
+
+
+/* console.log(window.location.pathname)
+window.onload = function() {
+/*     const headerContainerB = document.getElementById('headerB');
+ */    const headerContainerW = document.getElementById('headerW');
+
+    /* fetch('../components/header__b.html')
+        .then(response => response.text())
+        .then(html => {
+            headerContainerB.innerHTML = html;
+        })
+        .catch(error => {
+/*             console.error('Помилка завантаження header.html:', error);
+         }); */
+    fetch('../components/header__w.html')
+        .then(response => response.text())
+        .then(html => {
+            headerContainerW.innerHTML = html;
+        })
+        .catch(error => {
+/*             console.error('Помилка завантаження header.html:', error);
+ */        });
+    const footerContainer = document.getElementById('footer');
+
+    fetch('../../components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            footerContainer.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Помилка завантаження footer.html:', error);
+        });
+    const subscribeContainer = document.getElementById('subscribe');
+
+    fetch('../components/subscribe.html')
+        .then(response => response.text())
+        .then(html => {
+            subscribeContainer.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Помилка завантаження subscribe.html:', error);
+        });
+};
+
+
+ */
+
+
+   {
+        "id": 14,
+        "name": "French Fries",
+        "info": "Gourmet burger with arugula, feta cheese, quail eggs and...",
+        "price": "16.70",
+        "img": "../assets/images/products/french-fries.webp",
+        "category": ["Another"],
+        "size": "none",
+        "weight": ["400g","500g","600g"]
+        
+    }

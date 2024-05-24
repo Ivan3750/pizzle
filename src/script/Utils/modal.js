@@ -1,7 +1,9 @@
 import {Cart} from "../Classes/Cart.js"
 import {cartInstance} from "../Classes/Cart.js"
 const notification = document.querySelector('.notification');
+
 export function loadProductModal() {
+  const data =  require("../../data/products.json")
     const modalBlock = document.querySelector('.modal-product-info-block');
     const modalProductName = document.querySelector('.modal-product-name');
     const modalProductInfo = document.querySelector('.modal-product-info');
@@ -10,11 +12,13 @@ export function loadProductModal() {
     const modalProductBTN = document.querySelector(".modal-product-add");
     const productButtonSize = document.querySelectorAll('.product-btn-size');
     const cartProductNumber = document.querySelector('.products-number');
-
+    const closeModal = document.querySelector('.modal-product-close');
     const inputNumber = document.querySelector('.input-number');
     const inputMinus = document.querySelector('.input-minus');
     const inputPlus = document.querySelector('.input-plus');
   
+closeModal.addEventListener("click", () =>             modalBlock.classList.remove("show"))
+
     let sizeIndex = 0;
     let amount = 1;
     let activeProduct;
@@ -24,21 +28,21 @@ export function loadProductModal() {
    /*  if (activeProductID) {
       activeProductID = JSON.parse(activeProductID);
     } */
-  
-    fetch('../data/products.json')
+    /* fetch('../data/products.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         return response.json();
       })
-      .then(data => {
+      .then(data => { */
           console.log(data)
         activeProduct = data.find((product) => product.id == activeProductID);
         modalProductName.innerHTML = activeProduct.name;
         modalProductInfo.innerHTML = activeProduct.info;
         modalProductPrice.innerHTML = ` £ ${(activeProduct.price * amount).toFixed(2)}`;
-        modalProductImg.src = activeProduct.img;
+        let IMG_SRC =  require(`../../assets/images/products/${activeProduct.img}`) 
+        modalProductImg.src = IMG_SRC;
         modalProductBTN.addEventListener("click", ()=>{
         let productObj = {}
         productObj.amount = amount
@@ -46,7 +50,7 @@ export function loadProductModal() {
         productObj.name = activeProduct.name
         productObj.info = activeProduct.info
         productObj.price = activeProduct.price 
-        productObj.img = activeProduct.img
+        productObj.img = IMG_SRC
         productObj.size = "Medium"
         productObj.weight = "0g"
         notification.classList.add("active")
@@ -98,10 +102,10 @@ export function loadProductModal() {
             }
           });
         });
-      })
+    /*   })
 
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
-      });
+      }); */
   }
   

@@ -4,21 +4,21 @@
         "info": "Our pizzeria 'Pizzle' has opened its site for use in beta testing mode. Soon we will open a full-fledged site.",
         "dato": "18 Apr",
         "tag": "none",
-        "img": "../assets/images/news/beta-version.png"
+        "img": "beta-version.png"
     },
     {
         "title": "Free shipping today",
         "info": "Today, all orders will be delivered free of charge in 25 minutes.",
         "dato": "24 Apr",
         "tag": "none",
-        "img": "../assets/images/news/free-delivery.jpg"
+        "img": "free-delivery.jpg"
     },
     {
         "title": "Even more...",
         "info": "We have added even more products to the site. Even more products, even more satisfied customers.",
         "dato": "3 May",
         "tag": "none",
-        "img": "../assets/images/news/more-food.webp"
+        "img": "more.png"
     }
 ]
 
