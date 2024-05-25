@@ -1,23 +1,17 @@
-import $ from "jquery"
-import "slick-carousel"
-import sliderUI from "../UI/slider.js"
-const pizzaMenuUI = require ("../UI/pizza-menu.js")
-const heroUI = require ("../UI/hero.js")
+import $ from "jquery";
+import "slick-carousel";
+import sliderUI from "../UI/slider.js";
+var pizzaMenuUI = require("../UI/pizza-menu.js");
+var heroUI = require("../UI/hero.js");
 /* const loadUtils = require ("../Utils/load.js")
- */const cartIndexUtils = require ("../Utils/cartIndex.js");
-const mobileModal = require ("../UI/mobileModal.js");
-
-
-
-const slick = require("slick-carousel/slick/slick.css")
-const slickTheme = require("slick-carousel/slick/slick-theme.css")
+ */
+var cartIndexUtils = require("../Utils/cartIndex.js");
+var mobileModal = require("../UI/mobileModal.js");
+var slick = require("slick-carousel/slick/slick.css");
+var slickTheme = require("slick-carousel/slick/slick-theme.css");
 import "../../styles/standart.scss";
 import "../../styles/main.scss";
 import "../../styles/slider.scss";
-
-
-
-
 
 /* 
 import hero from "../UI/hero.js";
@@ -46,7 +40,6 @@ $(document).ready(function(){
   onload();
   slider();
 }); */
-
 
 /* // CSS Imports
 

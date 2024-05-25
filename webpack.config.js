@@ -14,7 +14,7 @@ module.exports = {
     cart: './src/script/modules/cart.js',
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
@@ -54,7 +54,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][hash][ext]',
+          filename: 'images/[name][ext]',
         },
         use: [
           {
@@ -120,7 +120,7 @@ module.exports = {
       chunks: ['cart'],
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'css/[name].css',
       chunkFilename: '[id].css',
     }),
     new webpack.HotModuleReplacementPlugin(),
