@@ -9,36 +9,90 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/script/Classes/News.js":
+/***/ "./src/script/Classes/Cart.js":
 /*!************************************!*\
-  !*** ./src/script/Classes/News.js ***!
+  !*** ./src/script/Classes/Cart.js ***!
   \************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   News: function() { return /* binding */ News; }\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nvar newsBlock = document.querySelector('.news-block');\nvar News = /*#__PURE__*/_createClass(function News(title, info, dato) {\n  var tag = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : none;\n  var img = arguments.length > 4 ? arguments[4] : undefined;\n  _classCallCheck(this, News);\n  this.title = title;\n  this.info = info;\n  this.dato = dato;\n  this.tag = tag;\n  this.img = img;\n  var newsCard = document.createElement(\"div\");\n  newsCard.classList.add(\"news-card\");\n  var newsImg = document.createElement(\"img\");\n  newsImg.classList.add(\"news-img\");\n  newsImg.src = __webpack_require__(\"./src/assets/images/news sync recursive ^\\\\.\\\\/.*$\")(\"./\".concat(this.img));\n  var newsBox = document.createElement(\"div\");\n  newsBox.classList.add(\"news-box\");\n  var newsTitle = document.createElement(\"h4\");\n  newsTitle.classList.add(\"news-title\");\n  newsTitle.innerHTML = this.title;\n  var newsInfo = document.createElement(\"p\");\n  newsInfo.classList.add(\"news-info\");\n  newsInfo.innerHTML = this.info;\n  var newsDato = document.createElement(\"p\");\n  newsDato.classList.add(\"news-dato\");\n  newsDato.innerHTML = this.dato;\n  newsBlock.append(newsCard);\n  newsCard.append(newsImg, newsBox);\n  newsBox.append(newsTitle, newsInfo, newsDato);\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/News.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Cart: function() { return /* binding */ Cart; },\n/* harmony export */   cartInstance: function() { return /* binding */ cartInstance; }\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nvar cartInstance;\nvar Cart = /*#__PURE__*/function () {\n  function Cart() {\n    _classCallCheck(this, Cart);\n    this.products = [];\n  }\n  return _createClass(Cart, [{\n    key: \"addProduct\",\n    value: function addProduct(product) {\n      var indexProduct = this.products.indexOf(product);\n      var foundProduct = this.products.find(function (e) {\n        return e.id === product.id;\n      });\n      console.log(foundProduct);\n      if (foundProduct !== undefined) {\n        /*  let foundProduct = this.products[indexProduct] */\n        console.log(foundProduct);\n        foundProduct.amount++;\n        localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n        console.log(\"CREATED ++\");\n      } else {\n        console.log(\"CREATED\");\n        this.products.push(product);\n        localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n      }\n    }\n  }, {\n    key: \"removeProduct\",\n    value: function removeProduct(product) {\n      /* const index = this.products.indexOf(product);\r\n      console.log(index)\r\n      if (index !== -1) {\r\n          this.products.splice(index, 1);\r\n          console.log(\"Product removed from cart:\", product);\r\n      } else {\r\n          console.log(\"Product not found in cart:\", product);\r\n          console.log(this.products)\r\n      } */\n      this.products = product;\n      localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n    }\n  }, {\n    key: \"getProducts\",\n    value: function getProducts() {\n      return this.products;\n    }\n  }, {\n    key: \"changeAmount\",\n    value: function changeAmount(product, id, amount) {\n      var foundProduct = this.products.find(function (e) {\n        return e.id === product.id;\n      });\n      foundProduct.amount = amount;\n      console.log(foundProduct.amount);\n      localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n    }\n  }]);\n}();\nwindow.addEventListener(\"load\", function () {\n  if (localStorage.cart) {\n    var restoredInstance = Object.assign(new Cart(), JSON.parse(localStorage.cart));\n    localStorage.setItem(\"cart\", JSON.stringify(restoredInstance));\n    cartInstance = restoredInstance;\n  } else {\n    cartInstance = new Cart();\n    localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n  }\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/Cart.js?");
 
 /***/ }),
 
-/***/ "./src/script/Init/loadNews.js":
+/***/ "./src/script/Classes/Product.js":
+/*!***************************************!*\
+  !*** ./src/script/Classes/Product.js ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Product: function() { return /* binding */ Product; }\n/* harmony export */ });\n/* harmony import */ var _Cart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cart.js */ \"./src/script/Classes/Cart.js\");\n/* harmony import */ var _Utils_modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/modal.js */ \"./src/script/Utils/modal.js\");\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\n/**\r\n *\r\n *\r\n * @class Product \r\n * This class is used to create a product card in Shop page\r\n */\n/* .modal-product-info-block{\r\n */\n\nvar modalBlock = document.querySelector('.modal-product-info-block');\nvar notification = document.querySelector('.notification');\n\n\n\nvar cartProductNumber = document.querySelector('.products-number');\n\n/* import {Cart} from \"../script/Cart.js\"\r\n */\n\nvar productsBlock = document.querySelector('.shop__products__main');\nvar Product = /*#__PURE__*/_createClass(function Product(id, name, amount, info, price, img, size, weight) {\n  var _this = this;\n  _classCallCheck(this, Product);\n  this.id = id;\n  this.name = name;\n  this.amount = amount;\n  this.info = info;\n  this.price = price;\n  this.img = img;\n  this.size = size;\n  this.weight = weight;\n  var productCard = document.createElement(\"div\");\n  productCard.classList.add(\"product-card\");\n  /* productCard.addEventListener(\"click\", (event)  =>{\r\n      window.location.href = \"../pages/product.html\"\r\n      sessionStorage.setItem(\"activeProduct\", this.id)\r\n      event.stopPropagation()\r\n  })  */\n\n  var productName = document.createElement(\"h4\");\n  productName.classList.add(\"product-name\");\n  productName.innerHTML = this.name;\n  var productInfo = document.createElement(\"p\");\n  productInfo.classList.add(\"product-info\");\n  productInfo.innerHTML = this.info;\n  var productPrice = document.createElement(\"p\");\n  productPrice.classList.add(\"product-price\");\n  productPrice.innerHTML = \"\".concat(this.price, \" \\xA3\");\n  var productImg = document.createElement(\"img\");\n  productImg.classList.add(\"product-img\");\n  console.log();\n  productImg.src = __webpack_require__(\"./src/assets/images/products sync recursive ^\\\\.\\\\/.*$\")(\"./\".concat(this.img));\n  productImg.style.width = \"224px\";\n  productImg.style.style = \"224px\";\n  var productBtn = document.createElement(\"button\");\n  productBtn.classList.add(\"product-btn\");\n  productBtn.innerHTML = \"add to cart\";\n  productBtn.addEventListener(\"click\", function () {\n    modalBlock.classList.add(\"show\");\n    sessionStorage.setItem(\"activeProduct\", _this.id);\n    (0,_Utils_modal_js__WEBPACK_IMPORTED_MODULE_1__.loadProductModal)();\n\n    /*             cartInstance.addProduct(this)             \r\n     */ /*  console.log(modalBlock)\r\n        console.log(cartInstance) */\n    cartProductNumber.innerHTML = JSON.parse(localStorage.cart).products.length;\n  });\n  productsBlock.append(productCard);\n  productCard.append(productImg, productName, productInfo, productPrice, productBtn);\n});\ncartProductNumber.innerHTML = JSON.parse(localStorage.cart).products.length;\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/Product.js?");
+
+/***/ }),
+
+/***/ "./src/script/Init/products.js":
 /*!*************************************!*\
-  !*** ./src/script/Init/loadNews.js ***!
+  !*** ./src/script/Init/products.js ***!
   \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_News_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/News.js */ \"./src/script/Classes/News.js\");\nfunction _createForOfIteratorHelper(r, e) { var t = \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && \"number\" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\n\nvar JSON = __webpack_require__(/*! ../../data/news.json */ \"./src/data/news.json\");\nvar _iterator = _createForOfIteratorHelper(JSON),\n  _step;\ntry {\n  for (_iterator.s(); !(_step = _iterator.n()).done;) {\n    var element = _step.value;\n    new _Classes_News_js__WEBPACK_IMPORTED_MODULE_0__.News(element.title, element.info, element.dato, element.tag, element.img);\n  }\n} catch (err) {\n  _iterator.e(err);\n} finally {\n  _iterator.f();\n}\nconsole.log(JSON);\n\"/assets/images/news/free-delivery.jpg\";\n\n//# sourceURL=webpack://pizzeria/./src/script/Init/loadNews.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/Product.js */ \"./src/script/Classes/Product.js\");\n\nvar data = __webpack_require__(/*! ../../data/products.json */ \"./src/data/products.json\");\nvar Index = 0;\nlocalStorage.setItem(\"lastIndex\", Index);\ndata.forEach(function (element) {\n  new _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__.Product(element.id, element.name, 1, element.info, element.price, element.img, \"Medium\", element.weight[1]);\n  console.log(data);\n  /* Створюємо продукт та публікуємо на сайт */\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Init/products.js?");
 
 /***/ }),
 
-/***/ "./src/script/modules/news.js":
+/***/ "./src/script/Init/shop.js":
+/*!*********************************!*\
+  !*** ./src/script/Init/shop.js ***!
+  \*********************************/
+/***/ (function() {
+
+eval("/* const modalBlock = document.querySelector('.modal-product-info-block'); \r\nconst modalClose = document.querySelector('.modal-product-close'); \r\n\r\nmodalClose.addEventListener(\"click\", ()=>{\r\n    modalBlock.classList.remove(\"show\")\r\n})\r\n */\n\n//# sourceURL=webpack://pizzeria/./src/script/Init/shop.js?");
+
+/***/ }),
+
+/***/ "./src/script/Utils/category.js":
+/*!**************************************!*\
+  !*** ./src/script/Utils/category.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/Product.js */ \"./src/script/Classes/Product.js\");\nfunction _createForOfIteratorHelper(r, e) { var t = \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && \"number\" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\nvar categoryElements = document.querySelectorAll('.shop__sidebar__category__list-element');\nvar productsMain = document.querySelector('.shop__products__main');\n\nvar data = __webpack_require__(/*! ../../data/products.json */ \"./src/data/products.json\");\n/* fetch('../data/products.json')\r\n  .then(response => {\r\n    if (!response.ok) {\r\n      throw new Error('Network response was not ok');\r\n    }\r\n    return response.json();\r\n  })\r\n  .then(data => { */\ncategoryElements.forEach(function (e) {\n  e.addEventListener(\"click\", function () {\n    productsMain.innerHTML = \"\";\n    if (e.innerHTML !== \"All\") {\n      var _iterator = _createForOfIteratorHelper(data),\n        _step;\n      try {\n        for (_iterator.s(); !(_step = _iterator.n()).done;) {\n          var element = _step.value;\n          for (var i = 0; i < element.category.length; i++) {\n            if (e.innerHTML.trim() == element.category[i]) {\n              new _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__.Product(element.id, element.name, 1, element.info, element.price, element.img); /*  Створюємо продукт та публікуємо на сайт */\n            }\n          }\n        }\n      } catch (err) {\n        _iterator.e(err);\n      } finally {\n        _iterator.f();\n      }\n    } else {\n      var _iterator2 = _createForOfIteratorHelper(data),\n        _step2;\n      try {\n        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {\n          var _element = _step2.value;\n          new _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__.Product(_element.id, _element.name, 1, _element.info, _element.price, _element.img); /*  Створюємо продукт та публікуємо на сайт */\n        }\n      } catch (err) {\n        _iterator2.e(err);\n      } finally {\n        _iterator2.f();\n      }\n    }\n  });\n});\n/* })\r\n.catch(error => {\r\n  console.error('There was a problem with the fetch operation:', error);\r\n}); */\n\n//# sourceURL=webpack://pizzeria/./src/script/Utils/category.js?");
+
+/***/ }),
+
+/***/ "./src/script/Utils/modal.js":
+/*!***********************************!*\
+  !*** ./src/script/Utils/modal.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadProductModal: function() { return /* binding */ loadProductModal; }\n/* harmony export */ });\n/* harmony import */ var _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/Cart.js */ \"./src/script/Classes/Cart.js\");\n\n\nvar notification = document.querySelector('.notification');\nfunction loadProductModal() {\n  var data = __webpack_require__(/*! ../../data/products.json */ \"./src/data/products.json\");\n  var modalBlock = document.querySelector('.modal-product-info-block');\n  var modalProductName = document.querySelector('.modal-product-name');\n  var modalProductInfo = document.querySelector('.modal-product-info');\n  var modalProductPrice = document.querySelector('.modal-product-price');\n  var modalProductImg = document.querySelector(\".modal-product-img\");\n  var modalProductBTN = document.querySelector(\".modal-product-add\");\n  var productButtonSize = document.querySelectorAll('.product-btn-size');\n  var cartProductNumber = document.querySelector('.products-number');\n  var closeModal = document.querySelector('.modal-product-close');\n  var inputNumber = document.querySelector('.input-number');\n  var inputMinus = document.querySelector('.input-minus');\n  var inputPlus = document.querySelector('.input-plus');\n  closeModal.addEventListener(\"click\", function () {\n    return modalBlock.classList.remove(\"show\");\n  });\n  var sizeIndex = 0;\n  var amount = 1;\n  var activeProduct;\n  var activeProductID = sessionStorage.activeProduct;\n  console.log(activeProductID);\n  /*  if (activeProductID) {\r\n     activeProductID = JSON.parse(activeProductID);\r\n   } */\n  /* fetch('../data/products.json')\r\n    .then(response => {\r\n      if (!response.ok) {\r\n        throw new Error('Network response was not ok');\r\n      }\r\n      return response.json();\r\n    })\r\n    .then(data => { */\n  console.log(data);\n  activeProduct = data.find(function (product) {\n    return product.id == activeProductID;\n  });\n  modalProductName.innerHTML = activeProduct.name;\n  modalProductInfo.innerHTML = activeProduct.info;\n  modalProductPrice.innerHTML = \" \\xA3 \".concat((activeProduct.price * amount).toFixed(2));\n  var IMG_SRC = __webpack_require__(\"./src/assets/images/products sync recursive ^\\\\.\\\\/.*$\")(\"./\".concat(activeProduct.img));\n  modalProductImg.src = IMG_SRC;\n  modalProductBTN.addEventListener(\"click\", function () {\n    var productObj = {};\n    productObj.amount = amount;\n    productObj.id = activeProduct.id;\n    productObj.name = activeProduct.name;\n    productObj.info = activeProduct.info;\n    productObj.price = activeProduct.price;\n    productObj.img = IMG_SRC;\n    productObj.size = \"Medium\";\n    productObj.weight = \"0g\";\n    notification.classList.add(\"active\");\n    setTimeout(function () {\n      notification.classList.remove(\"active\");\n    }, 2000);\n    console.log(_Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__.cartInstance);\n    _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__.cartInstance.addProduct(productObj);\n    cartProductNumber.innerHTML = JSON.parse(localStorage.cart).products.length;\n    modalBlock.classList.remove(\"show\");\n  });\n  inputMinus.addEventListener(\"click\", function () {\n    if (amount > 0) {\n      amount--;\n    }\n    inputNumber.innerHTML = amount;\n    modalProductPrice.innerHTML = \" \\xA3 \".concat(activeProduct.price * amount);\n  });\n  inputPlus.addEventListener(\"click\", function () {\n    amount++;\n    inputNumber.innerHTML = amount;\n    modalProductPrice.innerHTML = \" \\xA3 \".concat(activeProduct.price * amount);\n  });\n  productButtonSize.forEach(function (btn) {\n    btn.addEventListener(\"click\", function () {\n      productButtonSize.forEach(function (btn) {\n        return btn.classList.remove(\"active\");\n      });\n      switch (btn.innerHTML) {\n        case \"Large\":\n          sizeIndex = 2;\n          break;\n        case \"Medium\":\n          sizeIndex = 1;\n          break;\n        case \"Small\":\n          sizeIndex = 0;\n          break;\n      }\n      if (btn.classList.contains(\"active\")) {\n        btn.classList.remove(\"active\");\n      } else {\n        btn.classList.add(\"active\");\n      }\n    });\n  });\n  /*   })\r\n      .catch(error => {\r\n      console.error('There was a problem with the fetch operation:', error);\r\n    }); */\n}\n\n//# sourceURL=webpack://pizzeria/./src/script/Utils/modal.js?");
+
+/***/ }),
+
+/***/ "./src/script/Utils/search.js":
 /*!************************************!*\
-  !*** ./src/script/modules/news.js ***!
+  !*** ./src/script/Utils/search.js ***!
   \************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_news_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/news.scss */ \"./src/styles/news.scss\");\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n\n\nvar news = __webpack_require__(/*! ../../script/Classes/News.js */ \"./src/script/Classes/News.js\");\nvar loadNews = __webpack_require__(/*! ../../script/Init/loadNews.js */ \"./src/script/Init/loadNews.js\");\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/news.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/Product.js */ \"./src/script/Classes/Product.js\");\nfunction _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _iterableToArrayLimit(r, l) { var t = null == r ? null : \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }\nfunction _arrayWithHoles(r) { if (Array.isArray(r)) return r; }\nfunction _createForOfIteratorHelper(r, e) { var t = \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && \"number\" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\n\nvar searchInput = document.querySelector('.shop__sidebar__searchbar-input');\nvar searchBtn = document.querySelector('.shop__sidebar__searchbar-btn');\nvar productsMain = document.querySelector('.shop__products__main');\nvar searchInputValue;\nfunction getSearch() {\n  searchInputValue = searchInput.value;\n}\nvar data = __webpack_require__(/*! ../../data/products.json */ \"./src/data/products.json\");\n/* fetch(\"../data/products.json\")\r\n.then(response => {\r\n    if (!response.ok) {\r\n      throw new Error('Network response was not ok');\r\n    }\r\n    return response.json();\r\n  })\r\n  .then(data => { */\n\nsearchBtn.addEventListener(\"click\", function () {\n  search();\n});\nwindow.addEventListener(\"keydown\", function () {\n  if (event.key === \"Enter\") {\n    search();\n  }\n});\nfunction search() {\n  productsMain.innerHTML = \"\";\n  console.log(productsMain.innerHTML.trim() === '');\n  var _iterator = _createForOfIteratorHelper(data.entries()),\n    _step;\n  try {\n    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n      var _step$value = _slicedToArray(_step.value, 2),\n        index = _step$value[0],\n        element = _step$value[1];\n      if (element.name.toLowerCase().includes(searchInput.value)) {\n        console.log(\"We found this\" + element);\n        var product = new _Classes_Product_js__WEBPACK_IMPORTED_MODULE_0__.Product(element.id, element.name, 1, element.info, element.price, element.img); /*  Створюємо продукт та публікуємо на сайт */\n        console.log(product.name);\n      } else {\n        if (productsMain.innerHTML.trim() === '' && index === data.length - 1) {\n          productsMain.innerHTML = \"Nothing\";\n        }\n      }\n    }\n  } catch (err) {\n    _iterator.e(err);\n  } finally {\n    _iterator.f();\n  }\n}\n\n/*   })\r\n  .catch(error => {\r\n    console.error('There was a problem with the fetch operation:', error);\r\n  }); */\n\n//# sourceURL=webpack://pizzeria/./src/script/Utils/search.js?");
+
+/***/ }),
+
+/***/ "./src/script/modules/shop.js":
+/*!************************************!*\
+  !*** ./src/script/modules/shop.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n/* harmony import */ var _styles_shop_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/shop.scss */ \"./src/styles/shop.scss\");\n/* harmony import */ var _script_Classes_Product_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../script/Classes/Product.js */ \"./src/script/Classes/Product.js\");\n/* harmony import */ var _script_Init_products_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../script/Init/products.js */ \"./src/script/Init/products.js\");\n/* harmony import */ var _script_Utils_search_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../script/Utils/search.js */ \"./src/script/Utils/search.js\");\n/* harmony import */ var _script_Classes_Cart_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../script/Classes/Cart.js */ \"./src/script/Classes/Cart.js\");\n/* harmony import */ var _script_Utils_category_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../script/Utils/category.js */ \"./src/script/Utils/category.js\");\n/* harmony import */ var _script_Init_shop_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../script/Init/shop.js */ \"./src/script/Init/shop.js\");\n/* harmony import */ var _script_Init_shop_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_script_Init_shop_js__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _script_Utils_modal_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../script/Utils/modal.js */ \"./src/script/Utils/modal.js\");\n\n\n\n\n\n\n\n\n\n\n/* \r\n<link rel=\"stylesheet\" href=\"../styles/standart.css\">\r\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0\" />\r\n<link rel=\"stylesheet\" href=\"../styles/shop.css\"> */\n\n/* \r\n<script src=\"../script/Utils/onload.js\"></script>\r\n<script type=\"module\" src=\"../script/Utils/search.js\"></script>\r\n<script type=\"module\" src=\"../script/Classes/Cart.js\"></script>\r\n<script type=\"module\" src=\"../script/Utils/category.js\"></script>\r\n<script type=\"module\" src=\"../script/Classes/Product.js\"></script>\r\n<script type=\"module\" src=\"../script/Init/products.js\"></script>\r\n<script type=\"module\" src=\"../script/Init/shop.js\"></script>\r\n<script type=\"module\" src=\"../script/Utils/modal.js\"></script> */\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/shop.js?");
 
 /***/ }),
 
@@ -64,14 +118,14 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 
 /***/ }),
 
-/***/ "./src/styles/news.scss":
+/***/ "./src/styles/shop.scss":
 /*!******************************!*\
-  !*** ./src/styles/news.scss ***!
+  !*** ./src/styles/shop.scss ***!
   \******************************/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595499874\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/news.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595911755\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/shop.scss?");
 
 /***/ }),
 
@@ -82,61 +136,204 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595499883\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/standart.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595911752\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/standart.scss?");
 
 /***/ }),
 
-/***/ "./src/assets/images/news sync recursive ^\\.\\/.*$":
-/*!***********************************************!*\
-  !*** ./src/assets/images/news/ sync ^\.\/.*$ ***!
-  \***********************************************/
+/***/ "./src/assets/images/products sync recursive ^\\.\\/.*$":
+/*!***************************************************!*\
+  !*** ./src/assets/images/products/ sync ^\.\/.*$ ***!
+  \***************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./beta-version.png\": \"./src/assets/images/news/beta-version.png\",\n\t\"./free-delivery.jpg\": \"./src/assets/images/news/free-delivery.jpg\",\n\t\"./more.png\": \"./src/assets/images/news/more.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/images/news sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./bugar_2.png\": \"./src/assets/images/products/bugar_2.png\",\n\t\"./burgur-1.png\": \"./src/assets/images/products/burgur-1.png\",\n\t\"./french-fries.jpg\": \"./src/assets/images/products/french-fries.jpg\",\n\t\"./french-fries.png\": \"./src/assets/images/products/french-fries.png\",\n\t\"./ice-cream-1.png\": \"./src/assets/images/products/ice-cream-1.png\",\n\t\"./ice-cream-2.png\": \"./src/assets/images/products/ice-cream-2.png\",\n\t\"./juice_1.png\": \"./src/assets/images/products/juice_1.png\",\n\t\"./juice_2.png\": \"./src/assets/images/products/juice_2.png\",\n\t\"./juice_3.png\": \"./src/assets/images/products/juice_3.png\",\n\t\"./pasta.png\": \"./src/assets/images/products/pasta.png\",\n\t\"./pizza-cheese.png\": \"./src/assets/images/products/pizza-cheese.png\",\n\t\"./pizza_slide_2.png\": \"./src/assets/images/products/pizza_slide_2.png\",\n\t\"./pizza_slide_4 (1).png\": \"./src/assets/images/products/pizza_slide_4 (1).png\",\n\t\"./pizza_slide_4.png\": \"./src/assets/images/products/pizza_slide_4.png\",\n\t\"./product-12.png\": \"./src/assets/images/products/product-12.png\",\n\t\"./salad_1.png\": \"./src/assets/images/products/salad_1.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/images/products sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/_sync_^\\.\\/.*$?");
 
 /***/ }),
 
-/***/ "./src/assets/images/news/beta-version.png":
+/***/ "./src/assets/images/products/bugar_2.png":
+/*!************************************************!*\
+  !*** ./src/assets/images/products/bugar_2.png ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/bugar_2.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/bugar_2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/burgur-1.png":
 /*!*************************************************!*\
-  !*** ./src/assets/images/news/beta-version.png ***!
+  !*** ./src/assets/images/products/burgur-1.png ***!
   \*************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"images/beta-version.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/beta-version.png?");
+eval("module.exports = __webpack_require__.p + \"images/burgur-1.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/burgur-1.png?");
 
 /***/ }),
 
-/***/ "./src/assets/images/news/free-delivery.jpg":
-/*!**************************************************!*\
-  !*** ./src/assets/images/news/free-delivery.jpg ***!
-  \**************************************************/
+/***/ "./src/assets/images/products/french-fries.jpg":
+/*!*****************************************************!*\
+  !*** ./src/assets/images/products/french-fries.jpg ***!
+  \*****************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"images/free-delivery.jpg\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/free-delivery.jpg?");
+eval("module.exports = __webpack_require__.p + \"images/french-fries.jpg\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/french-fries.jpg?");
 
 /***/ }),
 
-/***/ "./src/assets/images/news/more.png":
-/*!*****************************************!*\
-  !*** ./src/assets/images/news/more.png ***!
-  \*****************************************/
+/***/ "./src/assets/images/products/french-fries.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/images/products/french-fries.png ***!
+  \*****************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"images/more.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/more.png?");
+eval("module.exports = __webpack_require__.p + \"images/french-fries.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/french-fries.png?");
 
 /***/ }),
 
-/***/ "./src/data/news.json":
-/*!****************************!*\
-  !*** ./src/data/news.json ***!
-  \****************************/
+/***/ "./src/assets/images/products/ice-cream-1.png":
+/*!****************************************************!*\
+  !*** ./src/assets/images/products/ice-cream-1.png ***!
+  \****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/ice-cream-1.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/ice-cream-1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/ice-cream-2.png":
+/*!****************************************************!*\
+  !*** ./src/assets/images/products/ice-cream-2.png ***!
+  \****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/ice-cream-2.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/ice-cream-2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/juice_1.png":
+/*!************************************************!*\
+  !*** ./src/assets/images/products/juice_1.png ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/juice_1.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/juice_1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/juice_2.png":
+/*!************************************************!*\
+  !*** ./src/assets/images/products/juice_2.png ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/juice_2.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/juice_2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/juice_3.png":
+/*!************************************************!*\
+  !*** ./src/assets/images/products/juice_3.png ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/juice_3.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/juice_3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/pasta.png":
+/*!**********************************************!*\
+  !*** ./src/assets/images/products/pasta.png ***!
+  \**********************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/pasta.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/pasta.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/pizza-cheese.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/images/products/pizza-cheese.png ***!
+  \*****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/pizza-cheese.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/pizza-cheese.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/pizza_slide_2.png":
+/*!******************************************************!*\
+  !*** ./src/assets/images/products/pizza_slide_2.png ***!
+  \******************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/pizza_slide_2.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/pizza_slide_2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/pizza_slide_4 (1).png":
+/*!**********************************************************!*\
+  !*** ./src/assets/images/products/pizza_slide_4 (1).png ***!
+  \**********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/pizza_slide_4 (1).png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/pizza_slide_4_(1).png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/pizza_slide_4.png":
+/*!******************************************************!*\
+  !*** ./src/assets/images/products/pizza_slide_4.png ***!
+  \******************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/pizza_slide_4.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/pizza_slide_4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/product-12.png":
+/*!***************************************************!*\
+  !*** ./src/assets/images/products/product-12.png ***!
+  \***************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/product-12.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/product-12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/products/salad_1.png":
+/*!************************************************!*\
+  !*** ./src/assets/images/products/salad_1.png ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/salad_1.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/products/salad_1.png?");
+
+/***/ }),
+
+/***/ "./src/data/products.json":
+/*!********************************!*\
+  !*** ./src/data/products.json ***!
+  \********************************/
 /***/ (function(module) {
 
 "use strict";
-eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a beta version of our site\",\"info\":\"Our pizzeria \\'Pizzle\\' has opened its site for use in beta testing mode. Soon we will open a full-fledged site.\",\"dato\":\"18 Apr\",\"tag\":\"none\",\"img\":\"beta-version.png\"},{\"title\":\"Free shipping today\",\"info\":\"Today, all orders will be delivered free of charge in 25 minutes.\",\"dato\":\"24 Apr\",\"tag\":\"none\",\"img\":\"free-delivery.jpg\"},{\"title\":\"Even more...\",\"info\":\"We have added even more products to the site. Even more products, even more satisfied customers.\",\"dato\":\"3 May\",\"tag\":\"none\",\"img\":\"more.png\"}]');\n\n//# sourceURL=webpack://pizzeria/./src/data/news.json?");
+eval("module.exports = /*#__PURE__*/JSON.parse('[{\"id\":0,\"name\":\"BBQ Pizza TinTin\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"10.99\",\"img\":\"pizza_slide_4.png\",\"category\":[\"Pizza\"],\"size\":[\"20cm\",\"30cm\",\"40cm\"],\"weight\":[\"400g\",\"500g\",\"600g\"]},{\"id\":1,\"name\":\"Chocolate Donuts\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"22.70\",\"img\":\"pizza_slide_2.png\",\"category\":[\"Pizza\"],\"size\":[\"20cm\",\"30cm\",\"40cm\"],\"weight\":[\"400g\",\"500g\",\"600g\"]},{\"id\":2,\"name\":\"Lemon Juice\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"12.30\",\"img\":\"juice_1.png\",\"category\":[\"Drinks\"],\"size\":[\"300ml\",\"500ml\",\"750ml\"],\"weight\":\"none\"},{\"id\":3,\"name\":\"Coke Soft Drinks\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"13.60\",\"img\":\"juice_3.png\",\"category\":[\"Drinks\"],\"size\":[\"300ml\",\"500ml\",\"750ml\"],\"weight\":\"none\"},{\"id\":4,\"name\":\"Orange Juice\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"10.20\",\"img\":\"juice_2.png\",\"category\":[\"Drinks\"],\"size\":[\"300ml\",\"500ml\",\"750ml\"],\"weight\":\"none\"},{\"id\":5,\"name\":\"Chicken Hamburger\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"40.30\",\"img\":\"bugar_2.png\",\"category\":[\"Sandwich\",\"Chicken\"],\"size\":[\"small\",\"medium\",\"large\"],\"weight\":[\"200g\",\"300g\",\"400g\"]},{\"id\":6,\"name\":\"Bolognese Pasta\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"15.30\",\"img\":\"pasta.png\",\"category\":[\"Pasta\"],\"size\":[\"small\",\"medium\",\"large\"],\"weight\":[\"300g\",\"500g\",\"700g\"]},{\"id\":7,\"name\":\"Greek Salad\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"07.40\",\"img\":\"salad_1.png\",\"category\":[\"Salad\"],\"size\":[\"small\",\"medium\",\"large\"],\"weight\":[\"100g\",\"300g\",\"400g\"]},{\"id\":8,\"name\":\"Flavour Cream Ice\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"14.20\",\"img\":\"ice-cream-2.png\",\"category\":[\"Desserts\"],\"size\":[\"small\",\"medium\",\"large\"],\"weight\":[\"150g\",\"200g\",\"250g\"]},{\"id\":9,\"name\":\"Vanilla Ice Cream\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"13.30\",\"img\":\"ice-cream-1.png\",\"category\":[\"Desserts\"],\"size\":[\"small\",\"medium\",\"large\"],\"weight\":[\"150g\",\"200g\",\"250g\"]},{\"id\":10,\"name\":\"Black Hamburger\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"42.10\",\"img\":\"burgur-1.png\",\"category\":[\"Sandwich\"],\"size\":[\"small\",\"medium\",\"large\"],\"weight\":[\"200g\",\"300g\",\"400g\"]},{\"id\":11,\"name\":\"BBQ Pizza TinTin\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"24.00\",\"img\":\"pizza_slide_4 (1).png\",\"category\":[\"Pizza\"],\"size\":[\"20cm\",\"30cm\",\"40cm\"],\"weight\":[\"400g\",\"500g\",\"600g\"]},{\"id\":12,\"name\":\"Hot Wings\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"36.70\",\"img\":\"product-12.png\",\"category\":[\"Another\"],\"size\":\"none\",\"weight\":[\"400g\",\"500g\",\"600g\"]},{\"id\":13,\"name\":\"BBQ Pizza TinTin\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"27.10\",\"img\":\"pizza-cheese.png\",\"category\":[\"Pizza\"],\"size\":[\"20cm\",\"30cm\",\"40cm\"],\"weight\":[\"400g\",\"500g\",\"600g\"]},{\"id\":14,\"name\":\"French Fries\",\"info\":\"Gourmet burger with arugula, feta cheese, quail eggs and...\",\"price\":\"16.70\",\"img\":\"french-fries.png\",\"category\":[\"Another\"],\"size\":\"none\",\"weight\":[\"400g\",\"500g\",\"600g\"]}]');\n\n//# sourceURL=webpack://pizzeria/./src/data/products.json?");
 
 /***/ })
 
@@ -185,6 +382,18 @@ eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -217,12 +426,12 @@ eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	!function() {
-/******/ 		__webpack_require__.hmrF = function() { return "news." + __webpack_require__.h() + ".hot-update.json"; };
+/******/ 		__webpack_require__.hmrF = function() { return "shop." + __webpack_require__.h() + ".hot-update.json"; };
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "abb9f2220801d604190c"; }
+/******/ 		__webpack_require__.h = function() { return "a9157d7a95efdfb7d11a"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -793,7 +1002,7 @@ eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
-/******/ 			"news": 0
+/******/ 			"shop": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1305,7 +1514,7 @@ eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/script/modules/news.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/script/modules/shop.js");
 /******/ 	
 /******/ })()
 ;

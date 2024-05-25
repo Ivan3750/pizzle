@@ -7,46 +7,38 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/script/Classes/Cart.js":
+/***/ "./src/script/Classes/News.js":
 /*!************************************!*\
-  !*** ./src/script/Classes/Cart.js ***!
+  !*** ./src/script/Classes/News.js ***!
   \************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Cart: function() { return /* binding */ Cart; },\n/* harmony export */   cartInstance: function() { return /* binding */ cartInstance; }\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nvar cartInstance;\nvar Cart = /*#__PURE__*/function () {\n  function Cart() {\n    _classCallCheck(this, Cart);\n    this.products = [];\n  }\n  return _createClass(Cart, [{\n    key: \"addProduct\",\n    value: function addProduct(product) {\n      var indexProduct = this.products.indexOf(product);\n      var foundProduct = this.products.find(function (e) {\n        return e.id === product.id;\n      });\n      console.log(foundProduct);\n      if (foundProduct !== undefined) {\n        /*  let foundProduct = this.products[indexProduct] */\n        console.log(foundProduct);\n        foundProduct.amount++;\n        localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n        console.log(\"CREATED ++\");\n      } else {\n        console.log(\"CREATED\");\n        this.products.push(product);\n        localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n      }\n    }\n  }, {\n    key: \"removeProduct\",\n    value: function removeProduct(product) {\n      /* const index = this.products.indexOf(product);\r\n      console.log(index)\r\n      if (index !== -1) {\r\n          this.products.splice(index, 1);\r\n          console.log(\"Product removed from cart:\", product);\r\n      } else {\r\n          console.log(\"Product not found in cart:\", product);\r\n          console.log(this.products)\r\n      } */\n      this.products = product;\n      localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n    }\n  }, {\n    key: \"getProducts\",\n    value: function getProducts() {\n      return this.products;\n    }\n  }, {\n    key: \"changeAmount\",\n    value: function changeAmount(product, id, amount) {\n      var foundProduct = this.products.find(function (e) {\n        return e.id === product.id;\n      });\n      foundProduct.amount = amount;\n      console.log(foundProduct.amount);\n      localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n    }\n  }]);\n}();\nwindow.addEventListener(\"load\", function () {\n  if (localStorage.cart) {\n    var restoredInstance = Object.assign(new Cart(), JSON.parse(localStorage.cart));\n    localStorage.setItem(\"cart\", JSON.stringify(restoredInstance));\n    cartInstance = restoredInstance;\n  } else {\n    cartInstance = new Cart();\n    localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n  }\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/Cart.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   News: function() { return /* binding */ News; }\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nvar newsBlock = document.querySelector('.news-block');\nvar News = /*#__PURE__*/_createClass(function News(title, info, dato) {\n  var tag = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : none;\n  var img = arguments.length > 4 ? arguments[4] : undefined;\n  _classCallCheck(this, News);\n  this.title = title;\n  this.info = info;\n  this.dato = dato;\n  this.tag = tag;\n  this.img = img;\n  var newsCard = document.createElement(\"div\");\n  newsCard.classList.add(\"news-card\");\n  var newsImg = document.createElement(\"img\");\n  newsImg.classList.add(\"news-img\");\n  newsImg.src = __webpack_require__(\"./src/assets/images/news sync recursive ^\\\\.\\\\/.*$\")(\"./\".concat(this.img));\n  var newsBox = document.createElement(\"div\");\n  newsBox.classList.add(\"news-box\");\n  var newsTitle = document.createElement(\"h4\");\n  newsTitle.classList.add(\"news-title\");\n  newsTitle.innerHTML = this.title;\n  var newsInfo = document.createElement(\"p\");\n  newsInfo.classList.add(\"news-info\");\n  newsInfo.innerHTML = this.info;\n  var newsDato = document.createElement(\"p\");\n  newsDato.classList.add(\"news-dato\");\n  newsDato.innerHTML = this.dato;\n  newsBlock.append(newsCard);\n  newsCard.append(newsImg, newsBox);\n  newsBox.append(newsTitle, newsInfo, newsDato);\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/News.js?");
 
 /***/ }),
 
-/***/ "./src/script/Classes/CartView.js":
-/*!****************************************!*\
-  !*** ./src/script/Classes/CartView.js ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CartView: function() { return /* binding */ CartView; }\n/* harmony export */ });\n/* harmony import */ var _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/Cart.js */ \"./src/script/Classes/Cart.js\");\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nvar cartBody = document.querySelector('.cart-table__body');\n\nvar DeliveryPrice = 0;\nvar CartView = /*#__PURE__*/function () {\n  function CartView(obj) {\n    var _this = this;\n    _classCallCheck(this, CartView);\n    this.elements = [];\n    this.obj = obj;\n    var bodyProduct = document.createElement(\"div\");\n    bodyProduct.classList.add(\"cart-table__body-product\");\n    var bodyProductImg = document.createElement(\"img\");\n    bodyProductImg.classList.add(\"cart-table__body-product-img\");\n    bodyProductImg.src = obj.img;\n    var bodyProductName = document.createElement(\"p\");\n    bodyProductName.classList.add(\"cart-table__body-product-name\");\n    bodyProductName.innerHTML = obj.name;\n    var bodyProductPrice = document.createElement(\"p\");\n    bodyProductPrice.classList.add(\"cart-table__body-product-price\");\n    bodyProductPrice.innerHTML = obj.price;\n    var bodyProductAmount = document.createElement(\"input\");\n    bodyProductAmount.classList.add(\"cart-table__body-product-amount\");\n    bodyProductAmount.value = obj.amount;\n    bodyProductAmount.addEventListener(\"change\", function () {\n      _this.changeAmount();\n    });\n    var bodyProductTotal = document.createElement(\"p\");\n    bodyProductTotal.classList.add(\"cart-table__body-product-total\");\n    bodyProductTotal.innerHTML = obj.price * bodyProductAmount.value;\n    var bodyProductRemove = document.createElement(\"button\");\n    bodyProductRemove.classList.add(\"cart-table__body-product-remove\");\n    bodyProductRemove.innerHTML = \"x\";\n    bodyProductRemove.addEventListener(\"click\", function () {\n      _this.remove();\n    });\n    cartBody.append(bodyProduct);\n    this.elements.push(bodyProduct, bodyProductImg, bodyProductName, bodyProductPrice, bodyProductAmount, bodyProductTotal, bodyProductRemove);\n    bodyProduct.append(bodyProductImg, bodyProductName, bodyProductPrice, bodyProductAmount, bodyProductTotal, bodyProductRemove);\n    console.log(this);\n  }\n  return _createClass(CartView, [{\n    key: \"changeAmount\",\n    value: function changeAmount() {\n      var _this2 = this;\n      var amount = this.elements[4].value;\n      if (amount == 0) {\n        this.remove();\n      }\n      var NewTotal = amount * Number(this.elements[3].innerHTML);\n      this.elements[5].innerHTML = NewTotal.toFixed(2);\n      var cart = JSON.parse(localStorage.getItem(\"cart\"));\n      var cartItems = cart.products;\n      console.log(cartItems);\n      console.log(this.obj.id);\n      var found = cartItems.find(function (e) {\n        return e.id === _this2.obj.id;\n      });\n      _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__.cartInstance.changeAmount(this.obj, this.obj.id, amount);\n      cartItems[cartItems.indexOf(found)].amount = amount;\n      updateTotal();\n    }\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var _this3 = this;\n      var cart = JSON.parse(localStorage.getItem(\"cart\"));\n      var cartItems = cart.products;\n      var NewCart = cartItems.filter(function (item) {\n        return item.id !== _this3.obj.id;\n      });\n      this.elements.forEach(function (element) {\n        element.remove();\n      });\n      _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__.cartInstance.removeProduct(NewCart);\n      updateTotal();\n      this.isEmpty();\n    }\n  }, {\n    key: \"isEmpty\",\n    value: function isEmpty() {\n      if (JSON.parse(localStorage.cart).products.length === 0) {\n        var emptyTXT = document.querySelector('.empty');\n        emptyTXT.innerHTML = \"Your cart is empty\";\n      }\n    }\n  }]);\n}();\nvar totalProductPrice = 0;\nvar totalProductPriceHTML = document.querySelector('.subtotal__box-price');\nvar totalPriceHTML = document.querySelector('.total__box-price');\nfunction updateTotal() {\n  var cart = JSON.parse(localStorage.getItem(\"cart\"));\n  var cartItems = cart.products;\n  console.log(cartItems);\n  totalProductPrice = 0;\n  cartItems.forEach(function (elem) {\n    totalProductPrice += Number(elem.amount) * Number(elem.price);\n    totalProductPrice = totalProductPrice.toFixed(2);\n    totalProductPrice = Number(totalProductPrice);\n    console.log(totalProductPrice);\n  });\n  totalProductPriceHTML.innerHTML = totalProductPrice;\n  totalPriceHTML.innerHTML = Number(totalProductPrice) + DeliveryPrice;\n}\nupdateTotal();\nvar removeAllBtn = document.querySelector('.remove-all-btn');\nremoveAllBtn.addEventListener(\"click\", function () {\n  var cart = JSON.parse(localStorage.getItem(\"cart\"));\n  cart.products = [];\n  localStorage.setItem(\"cart\", JSON.stringify(cart));\n  updateTotal();\n  cartBody.innerHTML = \"<p class=\\\"empty\\\">Your cart is empty</p>\";\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/CartView.js?");
-
-/***/ }),
-
-/***/ "./src/script/Init/cartPage.js":
+/***/ "./src/script/Init/loadNews.js":
 /*!*************************************!*\
-  !*** ./src/script/Init/cartPage.js ***!
+  !*** ./src/script/Init/loadNews.js ***!
   \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_CartView_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/CartView.js */ \"./src/script/Classes/CartView.js\");\n\nvar cart = JSON.parse(localStorage.getItem(\"cart\"));\nvar cartItems = cart.products; /* This must be Nothing */\n\nvar NewCartView;\nconsole.log(cart);\ncartItems.forEach(function (element) {\n  NewCartView = new _Classes_CartView_js__WEBPACK_IMPORTED_MODULE_0__.CartView(element);\n  console.log(NewCartView);\n});\nif (JSON.parse(localStorage.cart).products.length === 0) {\n  var emptyTXT = document.querySelector('.empty');\n  emptyTXT.innerHTML = \"Your cart is empty\";\n}\n\n//# sourceURL=webpack://pizzeria/./src/script/Init/cartPage.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_News_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/News.js */ \"./src/script/Classes/News.js\");\nfunction _createForOfIteratorHelper(r, e) { var t = \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && \"number\" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\n\nvar JSON = __webpack_require__(/*! ../../data/news.json */ \"./src/data/news.json\");\nvar _iterator = _createForOfIteratorHelper(JSON),\n  _step;\ntry {\n  for (_iterator.s(); !(_step = _iterator.n()).done;) {\n    var element = _step.value;\n    new _Classes_News_js__WEBPACK_IMPORTED_MODULE_0__.News(element.title, element.info, element.dato, element.tag, element.img);\n  }\n} catch (err) {\n  _iterator.e(err);\n} finally {\n  _iterator.f();\n}\nconsole.log(JSON);\n\"/assets/images/news/free-delivery.jpg\";\n\n//# sourceURL=webpack://pizzeria/./src/script/Init/loadNews.js?");
 
 /***/ }),
 
-/***/ "./src/script/modules/cart.js":
+/***/ "./src/script/modules/news.js":
 /*!************************************!*\
-  !*** ./src/script/modules/cart.js ***!
+  !*** ./src/script/modules/news.js ***!
   \************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n/* harmony import */ var _styles_cart_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/cart.scss */ \"./src/styles/cart.scss\");\n/* harmony import */ var _Classes_CartView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Classes/CartView.js */ \"./src/script/Classes/CartView.js\");\n/* harmony import */ var _Init_cartPage_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Init/cartPage.js */ \"./src/script/Init/cartPage.js\");\n/* harmony import */ var _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Classes/Cart.js */ \"./src/script/Classes/Cart.js\");\n\n\n\n\n\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/cart.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_news_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/news.scss */ \"./src/styles/news.scss\");\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n\n\nvar news = __webpack_require__(/*! ../../script/Classes/News.js */ \"./src/script/Classes/News.js\");\nvar loadNews = __webpack_require__(/*! ../../script/Init/loadNews.js */ \"./src/script/Init/loadNews.js\");\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/news.js?");
 
 /***/ }),
 
@@ -56,6 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*******************************************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
+"use strict";
 eval("\n\n/* eslint-env browser */\n/*\n  eslint-disable\n  no-console,\n  func-names\n*/\n\n/** @typedef {any} TODO */\n\nvar normalizeUrl = __webpack_require__(/*! ./normalize-url */ \"./node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js\");\nvar srcByModuleId = Object.create(null);\nvar noDocument = typeof document === \"undefined\";\nvar forEach = Array.prototype.forEach;\n\n/**\n * @param {function} fn\n * @param {number} time\n * @returns {(function(): void)|*}\n */\nfunction debounce(fn, time) {\n  var timeout = 0;\n  return function () {\n    // @ts-ignore\n    var self = this;\n    // eslint-disable-next-line prefer-rest-params\n    var args = arguments;\n    var functionCall = function functionCall() {\n      return fn.apply(self, args);\n    };\n    clearTimeout(timeout);\n\n    // @ts-ignore\n    timeout = setTimeout(functionCall, time);\n  };\n}\nfunction noop() {}\n\n/**\n * @param {TODO} moduleId\n * @returns {TODO}\n */\nfunction getCurrentScriptUrl(moduleId) {\n  var src = srcByModuleId[moduleId];\n  if (!src) {\n    if (document.currentScript) {\n      src = ( /** @type {HTMLScriptElement} */document.currentScript).src;\n    } else {\n      var scripts = document.getElementsByTagName(\"script\");\n      var lastScriptTag = scripts[scripts.length - 1];\n      if (lastScriptTag) {\n        src = lastScriptTag.src;\n      }\n    }\n    srcByModuleId[moduleId] = src;\n  }\n\n  /**\n   * @param {string} fileMap\n   * @returns {null | string[]}\n   */\n  return function (fileMap) {\n    if (!src) {\n      return null;\n    }\n    var splitResult = src.split(/([^\\\\/]+)\\.js$/);\n    var filename = splitResult && splitResult[1];\n    if (!filename) {\n      return [src.replace(\".js\", \".css\")];\n    }\n    if (!fileMap) {\n      return [src.replace(\".js\", \".css\")];\n    }\n    return fileMap.split(\",\").map(function (mapRule) {\n      var reg = new RegExp(\"\".concat(filename, \"\\\\.js$\"), \"g\");\n      return normalizeUrl(src.replace(reg, \"\".concat(mapRule.replace(/{fileName}/g, filename), \".css\")));\n    });\n  };\n}\n\n/**\n * @param {TODO} el\n * @param {string} [url]\n */\nfunction updateCss(el, url) {\n  if (!url) {\n    if (!el.href) {\n      return;\n    }\n\n    // eslint-disable-next-line\n    url = el.href.split(\"?\")[0];\n  }\n  if (!isUrlRequest( /** @type {string} */url)) {\n    return;\n  }\n  if (el.isLoaded === false) {\n    // We seem to be about to replace a css link that hasn't loaded yet.\n    // We're probably changing the same file more than once.\n    return;\n  }\n  if (!url || !(url.indexOf(\".css\") > -1)) {\n    return;\n  }\n\n  // eslint-disable-next-line no-param-reassign\n  el.visited = true;\n  var newEl = el.cloneNode();\n  newEl.isLoaded = false;\n  newEl.addEventListener(\"load\", function () {\n    if (newEl.isLoaded) {\n      return;\n    }\n    newEl.isLoaded = true;\n    el.parentNode.removeChild(el);\n  });\n  newEl.addEventListener(\"error\", function () {\n    if (newEl.isLoaded) {\n      return;\n    }\n    newEl.isLoaded = true;\n    el.parentNode.removeChild(el);\n  });\n  newEl.href = \"\".concat(url, \"?\").concat(Date.now());\n  if (el.nextSibling) {\n    el.parentNode.insertBefore(newEl, el.nextSibling);\n  } else {\n    el.parentNode.appendChild(newEl);\n  }\n}\n\n/**\n * @param {string} href\n * @param {TODO} src\n * @returns {TODO}\n */\nfunction getReloadUrl(href, src) {\n  var ret;\n\n  // eslint-disable-next-line no-param-reassign\n  href = normalizeUrl(href);\n  src.some(\n  /**\n   * @param {string} url\n   */\n  // eslint-disable-next-line array-callback-return\n  function (url) {\n    if (href.indexOf(src) > -1) {\n      ret = url;\n    }\n  });\n  return ret;\n}\n\n/**\n * @param {string} [src]\n * @returns {boolean}\n */\nfunction reloadStyle(src) {\n  if (!src) {\n    return false;\n  }\n  var elements = document.querySelectorAll(\"link\");\n  var loaded = false;\n  forEach.call(elements, function (el) {\n    if (!el.href) {\n      return;\n    }\n    var url = getReloadUrl(el.href, src);\n    if (!isUrlRequest(url)) {\n      return;\n    }\n    if (el.visited === true) {\n      return;\n    }\n    if (url) {\n      updateCss(el, url);\n      loaded = true;\n    }\n  });\n  return loaded;\n}\nfunction reloadAll() {\n  var elements = document.querySelectorAll(\"link\");\n  forEach.call(elements, function (el) {\n    if (el.visited === true) {\n      return;\n    }\n    updateCss(el);\n  });\n}\n\n/**\n * @param {string} url\n * @returns {boolean}\n */\nfunction isUrlRequest(url) {\n  // An URL is not an request if\n\n  // It is not http or https\n  if (!/^[a-zA-Z][a-zA-Z\\d+\\-.]*:/.test(url)) {\n    return false;\n  }\n  return true;\n}\n\n/**\n * @param {TODO} moduleId\n * @param {TODO} options\n * @returns {TODO}\n */\nmodule.exports = function (moduleId, options) {\n  if (noDocument) {\n    console.log(\"no window.document found, will not HMR CSS\");\n    return noop;\n  }\n  var getScriptSrc = getCurrentScriptUrl(moduleId);\n  function update() {\n    var src = getScriptSrc(options.filename);\n    var reloaded = reloadStyle(src);\n    if (options.locals) {\n      console.log(\"[HMR] Detected local css modules. Reload all css\");\n      reloadAll();\n      return;\n    }\n    if (reloaded) {\n      console.log(\"[HMR] css reload %s\", src.join(\" \"));\n    } else {\n      console.log(\"[HMR] Reload all css\");\n      reloadAll();\n    }\n  }\n  return debounce(update, 50);\n};\n\n//# sourceURL=webpack://pizzeria/./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js?");
 
 /***/ }),
@@ -66,17 +59,19 @@ eval("\n\n/* eslint-env browser */\n/*\n  eslint-disable\n  no-console,\n  func-
   \************************************************************************/
 /***/ (function(module) {
 
+"use strict";
 eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @returns {string}\n */\nfunction normalizeUrl(pathComponents) {\n  return pathComponents.reduce(function (accumulator, item) {\n    switch (item) {\n      case \"..\":\n        accumulator.pop();\n        break;\n      case \".\":\n        break;\n      default:\n        accumulator.push(item);\n    }\n    return accumulator;\n  }, /** @type {string[]} */[]).join(\"/\");\n}\n\n/**\n * @param {string} urlString\n * @returns {string}\n */\nmodule.exports = function (urlString) {\n  urlString = urlString.trim();\n  if (/^data:/i.test(urlString)) {\n    return urlString;\n  }\n  var protocol = urlString.indexOf(\"//\") !== -1 ? urlString.split(\"//\")[0] + \"//\" : \"\";\n  var components = urlString.replace(new RegExp(protocol, \"i\"), \"\").split(\"/\");\n  var host = components[0].toLowerCase().replace(/\\.$/, \"\");\n  components[0] = \"\";\n  var path = normalizeUrl(components);\n  return protocol + host + path;\n};\n\n//# sourceURL=webpack://pizzeria/./node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js?");
 
 /***/ }),
 
-/***/ "./src/styles/cart.scss":
+/***/ "./src/styles/news.scss":
 /*!******************************!*\
-  !*** ./src/styles/cart.scss ***!
+  !*** ./src/styles/news.scss ***!
   \******************************/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595499878\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/cart.scss?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595911707\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/news.scss?");
 
 /***/ }),
 
@@ -86,7 +81,62 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************************/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595499883\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/standart.scss?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595911752\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/standart.scss?");
+
+/***/ }),
+
+/***/ "./src/assets/images/news sync recursive ^\\.\\/.*$":
+/*!***********************************************!*\
+  !*** ./src/assets/images/news/ sync ^\.\/.*$ ***!
+  \***********************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./beta-version.png\": \"./src/assets/images/news/beta-version.png\",\n\t\"./free-delivery.jpg\": \"./src/assets/images/news/free-delivery.jpg\",\n\t\"./more.png\": \"./src/assets/images/news/more.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/images/news sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/_sync_^\\.\\/.*$?");
+
+/***/ }),
+
+/***/ "./src/assets/images/news/beta-version.png":
+/*!*************************************************!*\
+  !*** ./src/assets/images/news/beta-version.png ***!
+  \*************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/beta-version.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/beta-version.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/news/free-delivery.jpg":
+/*!**************************************************!*\
+  !*** ./src/assets/images/news/free-delivery.jpg ***!
+  \**************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/free-delivery.jpg\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/free-delivery.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/news/more.png":
+/*!*****************************************!*\
+  !*** ./src/assets/images/news/more.png ***!
+  \*****************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/more.png\";\n\n//# sourceURL=webpack://pizzeria/./src/assets/images/news/more.png?");
+
+/***/ }),
+
+/***/ "./src/data/news.json":
+/*!****************************!*\
+  !*** ./src/data/news.json ***!
+  \****************************/
+/***/ (function(module) {
+
+"use strict";
+eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a beta version of our site\",\"info\":\"Our pizzeria \\'Pizzle\\' has opened its site for use in beta testing mode. Soon we will open a full-fledged site.\",\"dato\":\"18 Apr\",\"tag\":\"none\",\"img\":\"beta-version.png\"},{\"title\":\"Free shipping today\",\"info\":\"Today, all orders will be delivered free of charge in 25 minutes.\",\"dato\":\"24 Apr\",\"tag\":\"none\",\"img\":\"free-delivery.jpg\"},{\"title\":\"Even more...\",\"info\":\"We have added even more products to the site. Even more products, even more satisfied customers.\",\"dato\":\"3 May\",\"tag\":\"none\",\"img\":\"more.png\"}]');\n\n//# sourceURL=webpack://pizzeria/./src/data/news.json?");
 
 /***/ })
 
@@ -167,12 +217,12 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	!function() {
-/******/ 		__webpack_require__.hmrF = function() { return "cart." + __webpack_require__.h() + ".hot-update.json"; };
+/******/ 		__webpack_require__.hmrF = function() { return "news." + __webpack_require__.h() + ".hot-update.json"; };
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "abb9f2220801d604190c"; }
+/******/ 		__webpack_require__.h = function() { return "a9157d7a95efdfb7d11a"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -743,7 +793,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
-/******/ 			"cart": 0
+/******/ 			"news": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1255,7 +1305,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/script/modules/cart.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/script/modules/news.js");
 /******/ 	
 /******/ })()
 ;
