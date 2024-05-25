@@ -6,6 +6,7 @@ const heroUI = require ("../UI/hero.js")
 /* const loadUtils = require ("../Utils/load.js")
  */const cartIndexUtils = require ("../Utils/cartIndex.js");
 const mobileModal = require ("../UI/mobileModal.js");
+const load = require ("../Utils/load.js");
 
 
 

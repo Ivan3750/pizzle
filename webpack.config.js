@@ -12,9 +12,10 @@ module.exports = {
     shop: './src/script/modules/shop.js',
     news: './src/script/modules/news.js',
     cart: './src/script/modules/cart.js',
+    order: './src/script/modules/order.js',
   },
   output: {
-    filename: 'js/[name].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
@@ -119,8 +120,13 @@ module.exports = {
       template: './src/pages/cart.html',
       chunks: ['cart'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'order.html',
+      template: './src/pages/order.html',
+      chunks: ['order'],
+    }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: '[name].css',
       chunkFilename: '[id].css',
     }),
     new webpack.HotModuleReplacementPlugin(),

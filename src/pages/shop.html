@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="shortcut icon" href="../assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
    <!--  <link rel="stylesheet" href="../styles/standart.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../styles/shop.css"> -->
 
 </head>
-<body>
+<body class="body">
+    <div class="mask">
+        <div class="load-1">
+         <p>Loading 1</p>
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+       </div>
+     </div>
     <header id="headerB" class="header">
         <a href="index.html">
             <img src="../assets/images/home/footer_logo.png" alt="" class="header__logo">
@@ -20,11 +28,16 @@
             <a href="index.html" class="header__nav-element" style="color: black;">Home</a>
             <a href="shop.html" class="header__nav-element" style="color: black;">Shop</a>
             <a href="news.html" class="header__nav-element" style="color: black;">News</a>
+            <img src="../assets/icons/icons8-close-100 (1).png" alt="" class="closeMobile-modal" width="40px">
+
         </nav>
         <a href="cart.html" class="cart-link">
             <img src="../assets/images/home/shopping-bag-black.svg" alt="" class="header__cart">
             <p class="products-number">0</p>
+            
         </a>
+        <img src="../assets/icons/icons8-menu-black.png" alt="" class="mobile-menu" width="25px">
+
     
     
     </header>
@@ -34,6 +47,7 @@
         </section>
         <section class="shop">
             <div class="shop__sidebar">
+                <img src="../assets/icons/icons8-close-100 (1).png" alt="" class="closeSidebar-img">
                 <div class="shop__sidebar__searchbar">
                     <input type="text" class="shop__sidebar__searchbar-input" placeholder="Search...">
                     <button class="shop__sidebar__searchbar-btn">
@@ -59,6 +73,7 @@
                 </div>
             </div>
             <div class="shop__products">
+                <img src="../assets/icons/icons8-category-100.png" alt="" class="img-categoty">
                 <div class="shop__products__list-result">
                     
                     <!-- <select name="orderby" class="orderby" aria-label="Shop order">

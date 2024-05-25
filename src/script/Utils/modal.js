@@ -40,7 +40,8 @@ closeModal.addEventListener("click", () =>             modalBlock.classList.remo
         activeProduct = data.find((product) => product.id == activeProductID);
         modalProductName.innerHTML = activeProduct.name;
         modalProductInfo.innerHTML = activeProduct.info;
-        modalProductPrice.innerHTML = ` £ ${(activeProduct.price * amount).toFixed(2)}`;
+        let GeneralPrice = activeProduct.price * amount
+        modalProductPrice.innerHTML = ` £ ${GeneralPrice.toFixed(2)}`;
         let IMG_SRC =  require(`../../assets/images/products/${activeProduct.img}`) 
         modalProductImg.src = IMG_SRC;
         modalProductBTN.addEventListener("click", ()=>{
@@ -72,13 +73,15 @@ closeModal.addEventListener("click", () =>             modalBlock.classList.remo
             amount--;
           }
           inputNumber.innerHTML = amount;
-          modalProductPrice.innerHTML = ` £ ${activeProduct.price * amount}`;
+          let GeneralPrice = activeProduct.price * amount
+        modalProductPrice.innerHTML = ` £ ${GeneralPrice.toFixed(2)}`;       
         });
   
         inputPlus.addEventListener("click", () => {
           amount++;
           inputNumber.innerHTML = amount;
-          modalProductPrice.innerHTML = ` £ ${activeProduct.price * amount}`;
+          let GeneralPrice = activeProduct.price * amount
+        modalProductPrice.innerHTML = ` £ ${GeneralPrice.toFixed(2)}`;     
         });
   
         productButtonSize.forEach((btn) => {

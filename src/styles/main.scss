@@ -66,6 +66,8 @@
     display: flex;
     padding: 175px 100px;
     justify-content: space-between;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
     align-items: center;
  /*    background-image: url(../assets/images/home/chef-bg.png);
     background-size: cover; */
@@ -925,11 +927,17 @@
 }
 
 @media (max-width: 800.98px){
+    .slider, .food-menu__pizza{
+        display: none;
+    }
+    .hero__left-img{
+        width: 75px;
+    }
     .footer {
         background-color: #fff;
         display: flex;
         justify-content: space-between;
-        padding: 60px 120px;
+        padding: 60px 20px;
         flex-direction: column;
         align-content: center;
         align-items: center;
@@ -949,9 +957,8 @@
 }
 
 @media (max-width: 550px){
-    .slider, .food-menu__pizza{
-        display: none;
-    }
+   
+   
     .food-menu .food-menu__right, .food-menu .food-menu__left {
         width: 300px;
         height: 450px;
@@ -979,6 +986,9 @@
 }
 
 @media (max-width: 450.98px){
+    .hero__left-img{
+        width: 60px;
+    }
     .promo__box {
         width: 307px;
         height: 159px;
@@ -1014,19 +1024,20 @@
         border-radius: 50px;
         margin: 20px auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding: 10px;
         max-width: 800px;
-        min-width: 200px!important;
+        min-width: 290px!important;
         flex-direction: column;
         align-items: center;
         gap: 7px;
-        width: 200px!important;
+        width: 290px!important;
     }
     .subscribe__input {
-        margin-left: 35px;
-        font-size: 10px;
-        width: 70%;
+        margin-left: 0px;
+        font-size: 16px;
+        width: 80%;
+        height: 25px;
     }
     .food-menu__center-span-st {
         color: #fff;
@@ -1067,6 +1078,7 @@
   
 .header__nav.mobileMode{
     background-color: #000;
+    font-size: 30px;
     width: 100%;
     height: 100vh;
     color: #fff;
@@ -1077,8 +1089,9 @@
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 150px 0px;
+padding: 250px 0px;
 box-sizing: border-box;
+overflow: hidden;
 &:hover{
     cursor: pointer;
 }
@@ -1107,6 +1120,9 @@ box-sizing: border-box;
 
 
 @media (max-width: 600.98px){
+    .hero{
+        padding: 175px 20px;
+    }
     .mobile-menu{
         display: block;
         &:hover{
@@ -1131,3 +1147,6 @@ box-sizing: border-box;
         width: auto;
     }
 }
+
+
+

@@ -105,6 +105,13 @@
     }
 }
 
+.cart-table__head {
+    display: flex;
+    gap: 20px;
+    padding: 0px 20px;
+    justify-content: center;
+}
+
 .order-summury{
     height: max-content;
     background: #FFF8EF none repeat scroll 0 0;
@@ -145,6 +152,9 @@
     font-weight: 500;
     background: #f7b035;
     color: #fff;
+    &.disabled{
+        background: #ccc;
+    }
 }
 .order-btn{
     padding: 10px 25px;
@@ -154,5 +164,216 @@
     background: #f7b035;
     color: #fff;
     width: 100%;
+    &.disabled{
+        background: #ccc;
+    }
 }
 
+
+
+@media (max-width: 1200.98px){
+    .cart{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+
+@media (max-width: 1100px){
+    .cart-table__head{
+        display: none;
+    }
+    .cart-table__body-product-amount {
+        width: 30px;
+    }
+    .cart-table__body-product-name {
+        width: 190px;
+    }
+    
+    
+}
+@media (max-width: 900px){
+    
+    .cart-table__body-product-name {
+        width: 120px;
+    }
+    .cart-table__body-product-remove {
+        width: 15px;
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: 0.4s;
+    }
+
+    
+    
+}
+@media (max-width: 1100px){
+    .cart-table__head{
+        display: none;
+    }
+    .cart-table__body-product-amount {
+        width: 30px;
+    }
+    .cart-table__body-product {
+        padding: 10px;
+        display: flex;
+        border-bottom: 0.5px solid rgba(200, 199, 197, 0.7176470588);
+        align-items: center;
+        gap: 10px;
+    }
+    
+    
+}
+
+@media (max-width: 790.98px){
+    .cart-table__body-product-name{
+        font-size: 12px;
+    }
+    .cart-table__body-product-price{
+        font-size: 12px;
+    }
+    .cart-table__body-product-total{
+        font-size: 12px;
+    }
+    .cart-table__body-product-img {
+        width: 88px;
+        height: 88px;
+    }
+    .cart {
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        padding: 30px 50px;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 650.98px){
+    .cart-table__body-product-price{
+        display: none;
+    }
+    .cart{
+        padding: 30px;
+    }
+}
+
+
+
+@media (max-width: 500.98px){
+    .cart-table__body-product-name{
+        font-size: 10px;
+    }
+    .cart-table__body-product-price{
+        font-size: 10px;
+    }
+    .cart-table__body-product-total{
+        font-size: 10px;
+    }
+    .cart-table__body-product-img{
+        width: 77px;
+        height: 77px;
+    }
+    .cart-table__body-product-total {
+        width: 45px;
+    }
+}
+
+@media (max-width: 400.98px){
+    .cart {
+        padding: 30px 10px;
+    }
+    .cart-table__body-product-name {
+        width: 75px;
+    }
+}
+
+
+
+.mobile-menu{
+    display: none;
+    &:hover{
+        cursor: pointer;
+    }
+  }
+
+
+  
+.header__nav.mobileMode{
+    background-color: #ffffff;
+    font-size: 30px;
+    width: 100%;
+    height: 100vh;
+    color: #000000;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    position: fixed;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 250px 0px;
+box-sizing: border-box;
+overflow: hidden;
+&:hover{
+    cursor: pointer;
+}
+}
+
+.closeMobile-modal{
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 500;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.closeMobile-modal.show{
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 500;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 600.98px){
+    
+    .hero{
+        padding: 175px 20px;
+    }
+    .mobile-menu{
+        display: block;
+        &:hover{
+            cursor: pointer;
+        }
+      }
+
+      .header__nav{
+        display: none;
+      }
+      .header {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100px;
+        padding: 40px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        color: #000;
+    }
+    .hero__left-title {
+        font-size: 40px;
+        width: auto;
+    }
+}

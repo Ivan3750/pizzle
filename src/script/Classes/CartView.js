@@ -1,6 +1,10 @@
 const cartBody = document.querySelector('.cart-table__body');
 import { cartInstance } from "../Classes/Cart.js";
+
+const removeAllBtn = document.querySelector('.remove-all-btn');
+const orderBtn = document.querySelector('.order-btn');
 const DeliveryPrice = 0
+let GENERAL__TOTAL
 
 export class CartView{
     constructor(obj){
@@ -33,7 +37,7 @@ export class CartView{
 
         let bodyProductTotal = document.createElement("p")
         bodyProductTotal.classList.add("cart-table__body-product-total")
-        bodyProductTotal.innerHTML =  obj.price * bodyProductAmount.value
+        bodyProductTotal.innerHTML =  (obj.price * bodyProductAmount.value).toFixed(2)
 
         let bodyProductRemove = document.createElement("button")
         bodyProductRemove.classList.add("cart-table__body-product-remove")
@@ -100,22 +104,45 @@ function updateTotal(){
         totalProductPrice = Number(totalProductPrice)
         console.log(totalProductPrice)
     })
-    totalProductPriceHTML.innerHTML = totalProductPrice
-    totalPriceHTML.innerHTML = Number(totalProductPrice) + DeliveryPrice
+    totalProductPriceHTML.innerHTML = totalProductPrice + " £"
+    totalPriceHTML.innerHTML = Number(totalProductPrice) + DeliveryPrice + " £"
+    GENERAL__TOTAL = Number(totalProductPrice) + DeliveryPrice
+    sessionStorage.setItem("total" , GENERAL__TOTAL)
+    if(cartItems.length > 0){
+        removeAllBtn.style.display = "block"
 
+        removeAllBtn.addEventListener("click", ()=>{
+            const cart = JSON.parse(localStorage.getItem("cart"))
+            cart.products = []
+            localStorage.setItem("cart", JSON.stringify(cart))
+            updateTotal()
+            cartBody.innerHTML = `<p class="empty">Your cart is empty</p>`
+        })
+    
+    }else{
+        removeAllBtn.style.display = "none"
+    }
 }
 
  
 
  updateTotal()
 
-const removeAllBtn = document.querySelector('.remove-all-btn');
 
-removeAllBtn.addEventListener("click", ()=>{
-    const cart = JSON.parse(localStorage.getItem("cart"))
-    cart.products = []
-    localStorage.setItem("cart", JSON.stringify(cart))
-    updateTotal()
-    cartBody.innerHTML = `<p class="empty">Your cart is empty</p>`
-})
+console.log(GENERAL__TOTAL)
+if(GENERAL__TOTAL === 0){
+    orderBtn.classList.add('disabled')
+}else{
+    orderBtn.classList.remove('disabled')
+    orderBtn.addEventListener("click", ()=>{
+        
+        if(GENERAL__TOTAL !== 0){
+            let GENERAL__TOTAL = Number(totalProductPrice) + DeliveryPrice
+            console.log(GENERAL__TOTAL)
+            sessionStorage.setItem("total" , GENERAL__TOTAL)
+            window.location.href = "order.html"
+        }
+            
+    })
 
+}

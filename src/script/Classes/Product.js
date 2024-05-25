@@ -30,7 +30,7 @@ export class Product{
         this.amount = amount
         this.info = info
         this.price = price
-        this.img = img
+        this.img = require(`../../assets/images/products/${img}`);
         this.size = size
         this.weight = weight
 
@@ -61,9 +61,8 @@ export class Product{
         const productImg = document.createElement("img")
         productImg.classList.add("product-img")
         console.log()
-        productImg.src = require(`../../assets/images/products/${this.img}`);
-        productImg.style.width = `224px`
-        productImg.style.style = `224px`
+        productImg.src = this.img
+    
 
         const productBtn = document.createElement("button")
         productBtn.classList.add("product-btn")
