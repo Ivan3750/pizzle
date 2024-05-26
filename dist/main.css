@@ -356,37 +356,60 @@
 /*!***********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/standart.scss (3) ***!
   \***********************************************************************************************************************/
-/* 
-.mask{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    position: fixed;
-    z-index: 1000;
+.load-1 .line:nth-last-child(1) {
+  animation: loadingA 1.5s 1s infinite;
 }
-.mask.hide{
-    display: none;
 
+.load-1 .line:nth-last-child(2) {
+  animation: loadingA 1.5s 0.5s infinite;
 }
-.load-img{
-    animation: 10s load infinite alternate;
-    width: 200px;
-    height: auto;
 
+.load-1 .line:nth-last-child(3) {
+  animation: loadingA 1.5s 0s infinite;
 }
-@keyframes load {
-    0%{
-        transform: translate(-1500px);
-    }
-    100%{
-        transform: translate(1500px);
 
-    }
+.line {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #f7b035;
+  margin: 0px auto;
 }
- */
+
+@keyframes loadingA {
+  0% {
+    height: 15px;
+  }
+  50% {
+    height: 35px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+.mask {
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  overflow: hidden;
+}
+
+.load-1 {
+  width: 60px;
+}
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -410,6 +433,11 @@
   border: 3px dotted #ff0000;
 }
 
+@media screen and (max-width: 768px) {
+  * {
+    scrollbar-color: rgba(247, 176, 53, 0) #2e2e2e;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -723,37 +751,60 @@ html {
 /*!*******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss (3) ***!
   \*******************************************************************************************************************/
-/* 
-.mask{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    position: fixed;
-    z-index: 1000;
+.load-1 .line:nth-last-child(1) {
+  animation: loadingA 1.5s 1s infinite;
 }
-.mask.hide{
-    display: none;
 
+.load-1 .line:nth-last-child(2) {
+  animation: loadingA 1.5s 0.5s infinite;
 }
-.load-img{
-    animation: 10s load infinite alternate;
-    width: 200px;
-    height: auto;
 
+.load-1 .line:nth-last-child(3) {
+  animation: loadingA 1.5s 0s infinite;
 }
-@keyframes load {
-    0%{
-        transform: translate(-1500px);
-    }
-    100%{
-        transform: translate(1500px);
 
-    }
+.line {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #f7b035;
+  margin: 0px auto;
 }
- */
+
+@keyframes loadingA {
+  0% {
+    height: 15px;
+  }
+  50% {
+    height: 35px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+.mask {
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  overflow: hidden;
+}
+
+.load-1 {
+  width: 60px;
+}
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -777,6 +828,11 @@ html {
   border: 3px dotted #ff0000;
 }
 
+@media screen and (max-width: 768px) {
+  * {
+    scrollbar-color: rgba(247, 176, 53, 0) #2e2e2e;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -941,6 +997,8 @@ html {
   display: flex;
   padding: 175px 100px;
   justify-content: space-between;
+  min-height: calc(100vh - 100px);
+  box-sizing: border-box;
   align-items: center;
   /*    background-image: url(../assets/images/home/chef-bg.png);
      background-size: cover; */
@@ -1751,11 +1809,17 @@ html {
   }
 }
 @media (max-width: 800.98px) {
+  .slider, .food-menu__pizza {
+    display: none;
+  }
+  .hero__left-img {
+    width: 75px;
+  }
   .footer {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 60px 120px;
+    padding: 60px 20px;
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -1773,9 +1837,6 @@ html {
   }
 }
 @media (max-width: 550px) {
-  .slider, .food-menu__pizza {
-    display: none;
-  }
   .food-menu .food-menu__right, .food-menu .food-menu__left {
     width: 300px;
     height: 450px;
@@ -1802,6 +1863,9 @@ html {
   }
 }
 @media (max-width: 450.98px) {
+  .hero__left-img {
+    width: 60px;
+  }
   .promo__box {
     width: 307px;
     height: 159px;
@@ -1835,19 +1899,20 @@ html {
     border-radius: 50px;
     margin: 20px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px;
     max-width: 800px;
-    min-width: 200px !important;
+    min-width: 290px !important;
     flex-direction: column;
     align-items: center;
     gap: 7px;
-    width: 200px !important;
+    width: 290px !important;
   }
   .subscribe__input {
-    margin-left: 35px;
-    font-size: 10px;
-    width: 70%;
+    margin-left: 0px;
+    font-size: 16px;
+    width: 80%;
+    height: 25px;
   }
   .food-menu__center-span-st {
     color: #fff;
@@ -1881,6 +1946,7 @@ html {
 
 .header__nav.mobileMode {
   background-color: #000;
+  font-size: 30px;
   width: 100%;
   height: 100vh;
   color: #fff;
@@ -1891,8 +1957,9 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 150px 0px;
+  padding: 250px 0px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .header__nav.mobileMode:hover {
   cursor: pointer;
@@ -1921,6 +1988,9 @@ html {
 }
 
 @media (max-width: 600.98px) {
+  .hero {
+    padding: 175px 20px;
+  }
   .mobile-menu {
     display: block;
   }

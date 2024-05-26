@@ -10,17 +10,17 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/standart.scss (2) ***!
   \***********************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-/*!***************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/news.scss ***!
-  \***************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/order.scss ***!
+  \****************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Unbounded:200,300,regular,500,600,700,800,900);
-/*!*******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/news.scss (1) ***!
-  \*******************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/order.scss (1) ***!
+  \********************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Delius+Unicase:regular,700);
-/*!*******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/news.scss (2) ***!
-  \*******************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/order.scss (2) ***!
+  \********************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 /*!***********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/standart.scss (3) ***!
@@ -417,9 +417,9 @@ html {
   width: 100%;
   background-color: #000;
 }
-/*!*******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/news.scss (3) ***!
-  \*******************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/order.scss (3) ***!
+  \********************************************************************************************************************/
 .load-1 .line:nth-last-child(1) {
   animation: loadingA 1.5s 1s infinite;
 }
@@ -606,9 +606,13 @@ html {
 
 .title__section {
   background-color: #FFF8EF;
-  padding: 150px 50px;
+  padding: 100px 80px;
 }
 
+/* 
+{
+    outline: 2px solid ;
+} */
 .title {
   font-size: 40px;
   color: #000;
@@ -628,136 +632,104 @@ html {
   z-index: 1000;
 }
 
-.news-block {
-  padding: 40px 60px;
+.header__nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
+  gap: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9e8d1;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  margin: 50px auto;
+}
+
+.fullname-input, .adress-input, .email-input, .phone-input, .note-input {
+  height: 50px;
+  border-radius: 20px;
+}
+
+.massege {
+  background-color: #f7b035;
+  width: 290px;
+  height: 50px;
+  position: fixed;
+  top: 25px;
+  right: 15px;
+  z-index: 2000;
+  border-radius: 20px;
+  display: none;
+  align-items: center;
   justify-content: center;
 }
 
-.news-card {
-  position: relative;
+.massege.show {
+  display: flex;
+  animation: massegeShow 2s linear;
+}
+
+@keyframes massegeShow {
+  0% {
+    display: flex;
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+textarea {
+  padding: 15px;
+  resize: none;
+  height: 100px !important;
+}
+
+.submit-btn {
+  background-color: #f7b035;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+
+input {
+  padding-left: 15px;
+}
+
+.total-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #f9e8d1;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  margin: 50px auto;
+}
+
+.order__section {
+  padding: 10px;
+}
+
+.order__placed {
+  display: none;
+  padding: 0px 20px;
+}
+
+.order__placed-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  justify-content: space-evenly;
-  padding: 30px 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9e8d1;
+  max-width: 600px;
   border-radius: 20px;
-  width: 400px;
-  box-shadow: 0px 0px 20px #d0d0d0;
-}
-
-.news-title {
-  font-weight: 700;
-  font-size: 28px;
-  text-align: center;
-  text-wrap: balance;
-  font-family: "Rubik";
-}
-
-.news-info {
-  font-weight: 300;
-  font-size: 18px;
-  font-family: "Rubik";
-}
-
-.news-img {
-  display: block;
-  margin: 0px auto;
-  height: 225px;
-  border-radius: 20px;
-}
-
-.news-dato {
-  position: absolute;
-  top: 0;
-  left: 5%;
   padding: 20px;
-  background-color: #f7b035;
-  border-radius: 0px 0px 20px 20px;
-  color: #fff;
+  gap: 10px;
+  margin: 50px auto;
 }
 
-@media (max-width: 1024.98px) {
-  .news-block {
-    padding: 40px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media (max-width: 500.98px) {
-  .news-img {
-    display: block;
-    margin: 0px auto;
-    height: 150px;
-    border-radius: 20px;
-  }
-  .news-title {
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    text-wrap: balance;
-    font-family: "Rubik";
-  }
-  .news-info {
-    font-weight: 300;
-    font-size: 16px;
-    font-family: "Rubik";
-  }
-  .news-img {
-    display: block;
-    margin: 0px auto;
-    height: 100px;
-    border-radius: 20px;
-  }
-}
-@media (max-width: 400.98px) {
-  .news-dato {
-    position: absolute;
-    top: 0;
-    left: 5%;
-    padding: 11px;
-    background-color: #f7b035;
-    border-radius: 0px 0px 20px 20px;
-    color: #fff;
-    font-size: 12px;
-  }
-  .news-title {
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    text-wrap: balance;
-    font-family: "Rubik";
-  }
-  .news-img {
-    display: block;
-    margin: 0px auto;
-    height: 100px;
-    border-radius: 20px;
-  }
-  .news-title {
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    text-wrap: balance;
-    font-family: "Rubik";
-  }
-  .news-info {
-    font-weight: 300;
-    font-size: 14px;
-    font-family: "Rubik";
-  }
-  .news-img {
-    display: block;
-    margin: 0px auto;
-    height: 105px;
-    border-radius: 20px;
-  }
-}
 .mobile-menu {
   display: none;
 }
@@ -837,14 +809,13 @@ html {
     width: auto;
   }
 }
-@media (max-width: 800.98px) {
+@media (max-width: 700.98px) {
   .header__nav {
     display: none;
   }
-  .non {
-    display: none;
-  }
-  .mobile-menu {
-    display: block;
+}
+@media (max-width: 400.98px) {
+  .header {
+    padding: 40px 20px;
   }
 }

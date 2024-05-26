@@ -9,39 +9,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/script/Classes/Cart.js":
-/*!************************************!*\
-  !*** ./src/script/Classes/Cart.js ***!
-  \************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Cart: function() { return /* binding */ Cart; },\n/* harmony export */   cartInstance: function() { return /* binding */ cartInstance; }\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nvar cartInstance;\nvar Cart = /*#__PURE__*/function () {\n  function Cart() {\n    _classCallCheck(this, Cart);\n    this.products = [];\n  }\n  return _createClass(Cart, [{\n    key: \"addProduct\",\n    value: function addProduct(product) {\n      var indexProduct = this.products.indexOf(product);\n      var foundProduct = this.products.find(function (e) {\n        return e.id === product.id;\n      });\n      console.log(foundProduct);\n      if (foundProduct !== undefined) {\n        /*  let foundProduct = this.products[indexProduct] */\n        console.log(foundProduct);\n        foundProduct.amount++;\n        localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n        console.log(\"CREATED ++\");\n      } else {\n        console.log(\"CREATED\");\n        this.products.push(product);\n        localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n      }\n    }\n  }, {\n    key: \"removeProduct\",\n    value: function removeProduct(product) {\n      /* const index = this.products.indexOf(product);\r\n      console.log(index)\r\n      if (index !== -1) {\r\n          this.products.splice(index, 1);\r\n          console.log(\"Product removed from cart:\", product);\r\n      } else {\r\n          console.log(\"Product not found in cart:\", product);\r\n          console.log(this.products)\r\n      } */\n      this.products = product;\n      localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n    }\n  }, {\n    key: \"getProducts\",\n    value: function getProducts() {\n      return this.products;\n    }\n  }, {\n    key: \"changeAmount\",\n    value: function changeAmount(product, id, amount) {\n      var foundProduct = this.products.find(function (e) {\n        return e.id === product.id;\n      });\n      foundProduct.amount = amount;\n      console.log(foundProduct.amount);\n      localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n    }\n  }]);\n}();\nwindow.addEventListener(\"load\", function () {\n  if (localStorage.cart) {\n    var restoredInstance = Object.assign(new Cart(), JSON.parse(localStorage.cart));\n    localStorage.setItem(\"cart\", JSON.stringify(restoredInstance));\n    cartInstance = restoredInstance;\n  } else {\n    cartInstance = new Cart();\n    localStorage.setItem(\"cart\", JSON.stringify(cartInstance));\n  }\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/Cart.js?");
-
-/***/ }),
-
-/***/ "./src/script/Classes/CartView.js":
-/*!****************************************!*\
-  !*** ./src/script/Classes/CartView.js ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CartView: function() { return /* binding */ CartView; }\n/* harmony export */ });\n/* harmony import */ var _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/Cart.js */ \"./src/script/Classes/Cart.js\");\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nvar cartBody = document.querySelector('.cart-table__body');\n\nvar removeAllBtn = document.querySelector('.remove-all-btn');\nvar orderBtn = document.querySelector('.order-btn');\nvar DeliveryPrice = 0;\nvar GENERAL__TOTAL;\nvar CartView = /*#__PURE__*/function () {\n  function CartView(obj) {\n    var _this = this;\n    _classCallCheck(this, CartView);\n    this.elements = [];\n    this.obj = obj;\n    var bodyProduct = document.createElement(\"div\");\n    bodyProduct.classList.add(\"cart-table__body-product\");\n    var bodyProductImg = document.createElement(\"img\");\n    bodyProductImg.classList.add(\"cart-table__body-product-img\");\n    bodyProductImg.src = obj.img;\n    var bodyProductName = document.createElement(\"p\");\n    bodyProductName.classList.add(\"cart-table__body-product-name\");\n    bodyProductName.innerHTML = obj.name;\n    var bodyProductPrice = document.createElement(\"p\");\n    bodyProductPrice.classList.add(\"cart-table__body-product-price\");\n    bodyProductPrice.innerHTML = obj.price;\n    var bodyProductAmount = document.createElement(\"input\");\n    bodyProductAmount.classList.add(\"cart-table__body-product-amount\");\n    bodyProductAmount.value = obj.amount;\n    bodyProductAmount.addEventListener(\"change\", function () {\n      _this.changeAmount();\n    });\n    var bodyProductTotal = document.createElement(\"p\");\n    bodyProductTotal.classList.add(\"cart-table__body-product-total\");\n    bodyProductTotal.innerHTML = (obj.price * bodyProductAmount.value).toFixed(2);\n    var bodyProductRemove = document.createElement(\"button\");\n    bodyProductRemove.classList.add(\"cart-table__body-product-remove\");\n    bodyProductRemove.innerHTML = \"x\";\n    bodyProductRemove.addEventListener(\"click\", function () {\n      _this.remove();\n    });\n    cartBody.append(bodyProduct);\n    this.elements.push(bodyProduct, bodyProductImg, bodyProductName, bodyProductPrice, bodyProductAmount, bodyProductTotal, bodyProductRemove);\n    bodyProduct.append(bodyProductImg, bodyProductName, bodyProductPrice, bodyProductAmount, bodyProductTotal, bodyProductRemove);\n    console.log(this);\n  }\n  return _createClass(CartView, [{\n    key: \"changeAmount\",\n    value: function changeAmount() {\n      var _this2 = this;\n      var amount = this.elements[4].value;\n      if (amount == 0) {\n        this.remove();\n      }\n      var NewTotal = amount * Number(this.elements[3].innerHTML);\n      this.elements[5].innerHTML = NewTotal.toFixed(2);\n      var cart = JSON.parse(localStorage.getItem(\"cart\"));\n      var cartItems = cart.products;\n      console.log(cartItems);\n      console.log(this.obj.id);\n      var found = cartItems.find(function (e) {\n        return e.id === _this2.obj.id;\n      });\n      _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__.cartInstance.changeAmount(this.obj, this.obj.id, amount);\n      cartItems[cartItems.indexOf(found)].amount = amount;\n      updateTotal();\n    }\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var _this3 = this;\n      var cart = JSON.parse(localStorage.getItem(\"cart\"));\n      var cartItems = cart.products;\n      var NewCart = cartItems.filter(function (item) {\n        return item.id !== _this3.obj.id;\n      });\n      this.elements.forEach(function (element) {\n        element.remove();\n      });\n      _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_0__.cartInstance.removeProduct(NewCart);\n      updateTotal();\n      this.isEmpty();\n    }\n  }, {\n    key: \"isEmpty\",\n    value: function isEmpty() {\n      if (JSON.parse(localStorage.cart).products.length === 0) {\n        var emptyTXT = document.querySelector('.empty');\n        emptyTXT.innerHTML = \"Your cart is empty\";\n      }\n    }\n  }]);\n}();\nvar totalProductPrice = 0;\nvar totalProductPriceHTML = document.querySelector('.subtotal__box-price');\nvar totalPriceHTML = document.querySelector('.total__box-price');\nfunction updateTotal() {\n  var cart = JSON.parse(localStorage.getItem(\"cart\"));\n  var cartItems = cart.products;\n  console.log(cartItems);\n  totalProductPrice = 0;\n  cartItems.forEach(function (elem) {\n    totalProductPrice += Number(elem.amount) * Number(elem.price);\n    totalProductPrice = totalProductPrice.toFixed(2);\n    totalProductPrice = Number(totalProductPrice);\n    console.log(totalProductPrice);\n  });\n  totalProductPriceHTML.innerHTML = totalProductPrice + \" £\";\n  totalPriceHTML.innerHTML = Number(totalProductPrice) + DeliveryPrice + \" £\";\n  GENERAL__TOTAL = Number(totalProductPrice) + DeliveryPrice;\n  sessionStorage.setItem(\"total\", GENERAL__TOTAL);\n  if (cartItems.length > 0) {\n    removeAllBtn.style.display = \"block\";\n    removeAllBtn.addEventListener(\"click\", function () {\n      var cart = JSON.parse(localStorage.getItem(\"cart\"));\n      cart.products = [];\n      localStorage.setItem(\"cart\", JSON.stringify(cart));\n      updateTotal();\n      cartBody.innerHTML = \"<p class=\\\"empty\\\">Your cart is empty</p>\";\n    });\n  } else {\n    removeAllBtn.style.display = \"none\";\n  }\n}\nupdateTotal();\nconsole.log(GENERAL__TOTAL);\nif (GENERAL__TOTAL === 0) {\n  orderBtn.classList.add('disabled');\n} else {\n  orderBtn.classList.remove('disabled');\n  orderBtn.addEventListener(\"click\", function () {\n    if (GENERAL__TOTAL !== 0) {\n      var _GENERAL__TOTAL = Number(totalProductPrice) + DeliveryPrice;\n      console.log(_GENERAL__TOTAL);\n      sessionStorage.setItem(\"total\", _GENERAL__TOTAL);\n      window.location.href = \"order.html\";\n    }\n  });\n}\n\n//# sourceURL=webpack://pizzeria/./src/script/Classes/CartView.js?");
-
-/***/ }),
-
-/***/ "./src/script/Init/cartPage.js":
-/*!*************************************!*\
-  !*** ./src/script/Init/cartPage.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Classes_CartView_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Classes/CartView.js */ \"./src/script/Classes/CartView.js\");\n\nvar cart = JSON.parse(localStorage.getItem(\"cart\"));\nvar cartItems = cart.products; /* This must be Nothing */\n\nvar NewCartView;\nconsole.log(cart);\ncartItems.forEach(function (element) {\n  NewCartView = new _Classes_CartView_js__WEBPACK_IMPORTED_MODULE_0__.CartView(element);\n  console.log(NewCartView);\n});\nif (JSON.parse(localStorage.cart).products.length === 0) {\n  var emptyTXT = document.querySelector('.empty');\n  emptyTXT.innerHTML = \"Your cart is empty\";\n}\n\n//# sourceURL=webpack://pizzeria/./src/script/Init/cartPage.js?");
-
-/***/ }),
-
 /***/ "./src/script/UI/mobileModal.js":
 /*!**************************************!*\
   !*** ./src/script/UI/mobileModal.js ***!
@@ -62,14 +29,24 @@ eval("var mask = document.querySelector('.mask');\nvar body = document.querySele
 
 /***/ }),
 
-/***/ "./src/script/modules/cart.js":
-/*!************************************!*\
-  !*** ./src/script/modules/cart.js ***!
-  \************************************/
+/***/ "./src/script/Utils/order.js":
+/*!***********************************!*\
+  !*** ./src/script/Utils/order.js ***!
+  \***********************************/
+/***/ (function() {
+
+eval("var form = document.querySelector('.form');\nvar orderPlaced = document.querySelector('.order__placed');\nvar orderSection = document.querySelector('.order__section');\nvar totalNUM = document.querySelector('.total-num');\nvar total = sessionStorage.getItem(\"total\");\ntotalNUM.innerHTML = total + \" £\";\nform.addEventListener(\"submit\", function () {\n  event.preventDefault();\n  var fullname = document.querySelector('.fullname-input').value;\n  var adress = document.querySelector('.adress-input').value;\n  var email = document.querySelector('.email-input').value;\n  var phone = document.querySelector('.phone-input').value;\n  var note = document.querySelector('.note-input').value;\n  if (fullname.length < 7) {\n    showMassege(\"Full name is too short\");\n  } else if (email.length < 7 && email.includes(\"@\")) {\n    showMassege(\"Incorrect email\");\n  } else if (phone.length < 10) {\n    showMassege(\"Incorrect phone\");\n  } else if (adress.length < 15) {\n    showMassege(\"Incorrect adress\");\n  } else {\n    orderPlaced.style.display = \"flex\";\n    orderSection.style.display = \"none\";\n  }\n});\nfunction showMassege(massegeToShow) {\n  var massege = document.querySelector('.massege');\n  var massegeTXT = document.querySelector('.massege-txt');\n  massegeTXT.innerHTML = massegeToShow;\n  massege.classList.add(\"show\");\n  setTimeout(function () {\n    massege.classList.remove(\"show\");\n  }, 3000);\n}\n\n//# sourceURL=webpack://pizzeria/./src/script/Utils/order.js?");
+
+/***/ }),
+
+/***/ "./src/script/modules/order.js":
+/*!*************************************!*\
+  !*** ./src/script/modules/order.js ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n/* harmony import */ var _styles_cart_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/cart.scss */ \"./src/styles/cart.scss\");\n/* harmony import */ var _Classes_CartView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Classes/CartView.js */ \"./src/script/Classes/CartView.js\");\n/* harmony import */ var _Init_cartPage_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Init/cartPage.js */ \"./src/script/Init/cartPage.js\");\n/* harmony import */ var _Classes_Cart_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Classes/Cart.js */ \"./src/script/Classes/Cart.js\");\n/* harmony import */ var _UI_mobileModal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../UI/mobileModal.js */ \"./src/script/UI/mobileModal.js\");\n/* harmony import */ var _UI_mobileModal_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_UI_mobileModal_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\nvar load = __webpack_require__(/*! ../Utils/load.js */ \"./src/script/Utils/load.js\");\n\n\n\n\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/cart.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n/* harmony import */ var _styles_order_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/order.scss */ \"./src/styles/order.scss\");\n\n\nvar load = __webpack_require__(/*! ../Utils/load.js */ \"./src/script/Utils/load.js\");\nvar mobileModal = __webpack_require__(/*! ../UI/mobileModal.js */ \"./src/script/UI/mobileModal.js\");\nvar order = __webpack_require__(/*! ../Utils/order.js */ \"./src/script/Utils/order.js\");\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/order.js?");
 
 /***/ }),
 
@@ -95,14 +72,14 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 
 /***/ }),
 
-/***/ "./src/styles/cart.scss":
-/*!******************************!*\
-  !*** ./src/styles/cart.scss ***!
-  \******************************/
+/***/ "./src/styles/order.scss":
+/*!*******************************!*\
+  !*** ./src/styles/order.scss ***!
+  \*******************************/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716680537400\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/cart.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716680537390\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/order.scss?");
 
 /***/ }),
 
@@ -162,30 +139,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/get javascript update chunk filename */
 /******/ 	!function() {
 /******/ 		// This function allow to reference all chunks
@@ -206,7 +159,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	!function() {
-/******/ 		__webpack_require__.hmrF = function() { return "cart." + __webpack_require__.h() + ".hot-update.json"; };
+/******/ 		__webpack_require__.hmrF = function() { return "order." + __webpack_require__.h() + ".hot-update.json"; };
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
@@ -782,7 +735,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
-/******/ 			"cart": 0
+/******/ 			"order": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1294,7 +1247,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/script/modules/cart.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/script/modules/order.js");
 /******/ 	
 /******/ })()
 ;

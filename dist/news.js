@@ -31,6 +31,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Cla
 
 /***/ }),
 
+/***/ "./src/script/UI/mobileModal.js":
+/*!**************************************!*\
+  !*** ./src/script/UI/mobileModal.js ***!
+  \**************************************/
+/***/ (function() {
+
+eval("var mobileMenuImg = document.querySelector('.mobile-menu');\nvar closeMobile = document.querySelector('.closeMobile-modal');\nvar headerNav = document.querySelector('.header__nav');\nvar body = document.querySelector('.body');\nmobileMenuImg.addEventListener(\"click\", function () {\n  headerNav.classList.add(\"mobileMode\");\n  headerNav.style.display = \"flex\";\n  closeMobile.classList.add(\"show\");\n  body.style.overflow = \"hidden\";\n});\ncloseMobile.addEventListener(\"click\", function () {\n  headerNav.classList.remove(\"mobileMode\");\n  headerNav.style.display = \"none\";\n  closeMobile.classList.remove(\"show\");\n  body.style.overflow = \"visible\";\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/UI/mobileModal.js?");
+
+/***/ }),
+
+/***/ "./src/script/Utils/load.js":
+/*!**********************************!*\
+  !*** ./src/script/Utils/load.js ***!
+  \**********************************/
+/***/ (function() {
+
+eval("var mask = document.querySelector('.mask');\nvar body = document.querySelector('.body');\nwindow.addEventListener('load', function () {\n  mask.classList.add('hide');\n  setTimeout(function () {\n    mask.remove();\n    body.style.overflow = \"visible\";\n  }, 50);\n});\n\n//# sourceURL=webpack://pizzeria/./src/script/Utils/load.js?");
+
+/***/ }),
+
 /***/ "./src/script/modules/news.js":
 /*!************************************!*\
   !*** ./src/script/modules/news.js ***!
@@ -38,7 +58,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Cla
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_news_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/news.scss */ \"./src/styles/news.scss\");\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n\n\nvar news = __webpack_require__(/*! ../../script/Classes/News.js */ \"./src/script/Classes/News.js\");\nvar loadNews = __webpack_require__(/*! ../../script/Init/loadNews.js */ \"./src/script/Init/loadNews.js\");\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/news.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_standart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/standart.scss */ \"./src/styles/standart.scss\");\n/* harmony import */ var _styles_news_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/news.scss */ \"./src/styles/news.scss\");\n\n\nvar news = __webpack_require__(/*! ../../script/Classes/News.js */ \"./src/script/Classes/News.js\");\nvar loadNews = __webpack_require__(/*! ../../script/Init/loadNews.js */ \"./src/script/Init/loadNews.js\");\nvar mobileModal = __webpack_require__(/*! ../../script/UI/mobileModal.js */ \"./src/script/UI/mobileModal.js\");\nvar load = __webpack_require__(/*! ../Utils/load.js */ \"./src/script/Utils/load.js\");\n\n//# sourceURL=webpack://pizzeria/./src/script/modules/news.js?");
 
 /***/ }),
 
@@ -71,7 +91,7 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595911707\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/news.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716680537397\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/news.scss?");
 
 /***/ }),
 
@@ -82,7 +102,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716595911752\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/standart.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1716680537394\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://pizzeria/./src/styles/standart.scss?");
 
 /***/ }),
 
@@ -222,7 +242,7 @@ eval("module.exports = /*#__PURE__*/JSON.parse('[{\"title\":\"We have launched a
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "a9157d7a95efdfb7d11a"; }
+/******/ 		__webpack_require__.h = function() { return "3b42fb1130b425aae841"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

@@ -7,6 +7,7 @@ var heroUI = require("../UI/hero.js");
  */
 var cartIndexUtils = require("../Utils/cartIndex.js");
 var mobileModal = require("../UI/mobileModal.js");
+var load = require("../Utils/load.js");
 var slick = require("slick-carousel/slick/slick.css");
 var slickTheme = require("slick-carousel/slick/slick-theme.css");
 import "../../styles/standart.scss";

@@ -1,5 +1,6 @@
 import "../../styles/standart.scss";
 import "../../styles/shop.scss";
+import "../../script/UI/mobileModal.js";
 import "../../script/Classes/Product.js";
 import "../../script/Init/products.js";
 import "../../script/Utils/search.js";
@@ -7,6 +8,8 @@ import "../../script/Classes/Cart.js";
 import "../../script/Utils/category.js";
 import "../../script/Init/shop.js";
 import "../../script/Utils/modal.js";
+import "../../script/UI/categoryUI.js";
+var load = require("../Utils/load.js");
 
 /* 
 <link rel="stylesheet" href="../styles/standart.css">
