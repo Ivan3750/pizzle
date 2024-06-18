@@ -38,6 +38,6 @@ This project is a comprehensive website for a pizzeria, designed to provide user
 
 For questions, suggestions, or feedback, please contact us at:
 - Email: kohan3750@gmail.com
-- GitHub: [yourusername](https://github.com/ivan3750)
+- GitHub: [ivan3750](https://github.com/ivan3750)
 
 Thank you for visiting our project! Enjoy your experience with the Pizzeria Website.
